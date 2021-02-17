@@ -1,0 +1,31 @@
+===GLOGEN GLOSSARY===
+
+|1| Universal Scene Description : (wiki) Universal Scene Description (USD) is a framework for interchange of 3D computer graphics data, created by Pixar.
+|2| ASCII : (computing) American Standard Code for Information Interchange.
+|3| unencrypted : (computing) Of something that has been decrypted successfully, or of something that should have been encrypted, but was not.
+|4| SceneKit : (wiki) SceneKit, sometimes rendered Scene Kit, is a 3D graphics application programming interface (API) for Apple Inc. platforms written in Objective-C.
+|5| USD : invalid-pos
+|6| USD : invalid-pos
+|7| Blender : (computer graphics) An open source, cross-platform suite of tools for the creation of 3D graphics.
+
+===DOCUMENT BODY===
+
+Universal Scene Description|0| (USD) is a framework for interchange of 3D computer graphics data, created by Pixar. The framework focuses on collaboration, non-destructive editing, and enabling multiple views and opinions about graphics data.File formats used by the standard include:
+.usd, which can be either ASCII|1| or binary-encoded
+.usda, ASCII encoded
+.usdc, binary encoded
+.usdz, a package file which is a zero-compression, unencrypted|2| zip archive, which may contain usd, usda, usdc, png, jpeg, m4a, mp3, and wav files.
+
+
+== Support ==
+Apple support .usdz files in SceneKit|3|, for 3D model interchange purposes.
+Nvidia has announced support for USD|4| in Omniverse, a graphics collaboration platform.
+Houdini includes an implementation of USD, for purposes of format interchange and scene editing.
+Blender|5| includes support for USD export.
+
+
+== References ==
+
+
+== External links ==
+Introduction to Universal Scene Description by Pixar
