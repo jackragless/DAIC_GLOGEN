@@ -1,0 +1,63 @@
+Metaio was a privately held Augmented Reality (AR) company that developed software technology and provided augmented reality solutions.
+Headquartered in Munich, Germany, with subsidiaries in San Francisco, California, New York City, New York and Dallas, Texas, metaio provided a software development kit (SDK) for programming PC, web, mobile and custom offline augmented reality applications.
+Additionally, Metaio was the creator of Junaio, a free mobile AR browser available for Android and iOS devices.
+On 28 May 2015 it was reported that Metaio GmbH was acquired by Apple Inc for an undisclosed sum.
+
+
+== History ==
+Metaio was founded in 2003 in Munich, Germany by current CEO, Thomas Alt and current CTO, Peter Meier. The company grew out of an internal project within Volkswagen that received a German grant the founders used to bootstrap their enterprise.
+In 2005 Metaio released the first end-consumer AR application called KPS Click & Design in Germany which allowed the user to put virtual furniture in an image of their living room. In addition, metaio also released the Unifeye Platform which enabled third-party developers to create their own commercial AR solutions. In 2006 metaio released the first browsing plug-in for web-based AR applications.
+Shortly thereafter, Metaio launched the first fully integrated AR application for mobile devices with the release of the mobile AR browser Junaio.
+From 2010 to 2012, Metaio presented the first commercial 2-D Markerless Feature tracking application for print and television on a consumer mobile device and as a result won the ISMAR Tracking Contest in 2011.
+On May 23, 2015, Metaio ceased product licensing, cancelled all pending conferences, and posted this notice on their support site:Metaio products and subscriptions are no longer available for purchase.  Downloads of your previous purchases will be available until 15 December 2015, and active cloud subscriptions will be continued until expiration. Email support will continue until 30 June 2015.On May 28, 2015, TechCrunch and the Wall Street Journal reported that Apple had bought the company.
+
+
+== Products ==
+Metaio offered products covering the needs of the AR value chain from product design, engineering, operations, marketing, sales and customer support.Metaio SDK - The metaio SDK allows developers to use content without prior encryption. No offline tools or server side encryption is needed when generating and deploying 3D assets and tracking patterns. The SDK is currently supported on Android, iOS and Windows with an additional plugin for development in Unity for Android, iOS, Windows and OS X platforms.Metaio Creator - The metaio Creator is augmented reality software that allows users to create a complete AR scenario without specialized programming knowledge through a drag and drop interface.
+Metaio CVS - Metaio Continuous Visual Search (CVS) manages marker searching online for instant image recognition
+Metaio Cloud - Allows developers to store and manage content online.
+Junaio – Junaio is an augmented reality browser which allows users to experience mobile augmented reality through multiple channels on their mobile devices.
+Metaio Engineer - Provides solutions for technical assignments from the visualization of future facilities within a current production environment over illustrating working instructions on a component to deviation measurement between virtuality and reality.
+
+
+== Events ==
+Since 2006 metaio has organized insideAR, an annual event solely dedicated to Augmented Reality developers, researchers and businesses. In 2013 InsideAR was the world's largest augmented reality conference.
+
+
+== Press ==
+In 2011 Reuters wrote an article about metaio in collaboration with ST-Ericsson announcing the company as "the world-wide leader in Augmented Reality technology."
+In 2012 The Next Web announced: "…While there are a slew of apps that tap GPS, image recognition, visual search and other elements of augmented reality, junaio does a good job of merging them all."
+
+
+== Awards ==
+2014
+
+Auggies Award for the "Best Campaign"2013
+
+Volkswagen Augmented Reality Tracking Challenge
+ISMAR Best Poster2012
+
+Auggies Award for "Best AR Demo"2011
+
+ISMAR Tracking Contest Award for "World’s first mobile 3D Tracking"
+Augmented Planet Reader's Choice Award for "Best AR Marketing Campaign" and "Best AR Developer Toolkit" for the metaio Mobile SDK
+Best Android AR App Ever – Second Place for "Best App Ever"2010
+
+Augmented Planet Reader's Choice Award – Runner up for "Best Augmented Reality"
+Innovationspreis des Jahres for "Virtual Dressing Room"2009
+
+"I caught their eye" Award, Winner in the Innovation for Tomorrow category2007
+
+First Prize at "Deutscher Internetpreis" (German Internet Award)2004
+
+Der Innovationspreis für zukunftsweisende Business-Ideen (The Innovation Award for Forward-Thinking Business Ideas)
+
+
+== References ==
+
+
+== External links ==
+metaio home page - website for Augmented Reality
+metaio Augmented Reality Blog
+junaio home page
+Metaio Thermal Touch Technology
