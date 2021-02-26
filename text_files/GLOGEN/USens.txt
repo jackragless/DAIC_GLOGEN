@@ -1,31 +1,25 @@
 ===GLOGEN GLOSSARY===
 
-|1| immersive : (general) Tending to immerse.
-|2| computer vision : (artificial intelligence) The science and technology of machines that see, concerned with the theory for building artificial systems that obtain information from images, such as a video sequence, views from multiple cameras, or multi-dimensional data from a medical scanner.
-|3| augmented : (general) simple past tense and past participle of augment
-|4| co-founder : (general) Alternative form of cofounder
-|5| Fingo : (wiki) Fingos is a discontinued breakfast cereal snack from General Mills that lasted from 1993 to 1994.
-|6| uSens : (wiki) uSens, Inc. is a Silicon Valley startup founded in 2014 in San Jose, California.
-|7| smart TV : (general) A television with integrated Internet features.
-|8| hand gestures : (wiki) Gestures are a form of nonverbal communication in which visible bodily actions are used to communicate important messages, either in place of speech or together and in parallel with spoken words.
-|9| Kickstarter : (wiki) Kickstarter is an American public benefit corporation based in Brooklyn, New York, that maintains a global crowdfunding platform focused on creativity.
-|10| Chord : invalid-term
-|11| Chord : (anatomy) A cord.
-|12| ARM : invalid-pos
-|13| ARM : invalid-pos
+|1| computer vision : (artificial intelligence) The science and technology of machines that see, concerned with the theory for building artificial systems that obtain information from images, such as a video sequence, views from multiple cameras, or multi-dimensional data from a medical scanner
+|2| co-founder : (general) Alternative form of cofounder
+|3| uSens : (wiki) uSens, Inc. is a Silicon Valley startup founded in 2014 in San Jose, California.
+|4| smart TV : (general) A television with integrated Internet features
+|5| hand gestures : (wiki) Gestures are a form of nonverbal communication in which visible bodily actions are used to communicate important messages, either in place of speech or together and in parallel with spoken words.
+|6| Chord : (anatomy) A cord
+|7| ARM : (general) accelerated reply mail: a service of the United States Postal Service
 
 ===DOCUMENT BODY===
 
-uSens, Inc. is a Silicon Valley startup founded in 2014 in San Jose, California.  The company's core team includes researchers and developers building interactive and immersive|0| computer-vision tracking solutions. The team has extensive experience in artificial intelligence (AI), computer vision|1|, 3D Human–computer interaction (HCI) technology and augmented|2| reality and virtual reality. uSens has been applying computer vision and AI technologies in AR/VR, Automotive and smartphones.  
+uSens, Inc. is a Silicon Valley startup founded in 2014 in San Jose, California.  The company's core team includes researchers and developers building interactive and immersive computer-vision tracking solutions. The team has extensive experience in artificial intelligence (AI), computer vision, 3D Human–computer interaction (HCI) technology and augmented reality and virtual reality. uSens has been applying computer vision|1| and AI technologies in AR/VR, Automotive and smartphones.  
 uSens has its corporate headquarters in San Jose, California, with additional offices in China in Beijing, Hangzhou, and Shenzhen.
 
 
 == History ==
-The co-founder|3| of uSens, Dr. Yue Fei, is a researcher in the field of 3D user interfaces and virtual reality who earned his PhD from Rice University in Space Physics.uSens has developed products in the area of HCI, such as the Fingo|4| Virtual Touch, selling in China. Fingo Virtual Touch uses the company’s patented Fingo technology. Fingo is the hardware and software that uSens|5| has developed to allow a user to interact with a digital interface, like a smart TV|6| without the need to touch any surface; it can sense finger movements and hand gestures|7|. It consists of a small sensor and a set of software algorithms that automatically “sense” and translate hand gestures into movements onscreen.In March 2015, the company launched a Kickstarter|8| campaign to fund a VR/AR hardware product, reaching its initial funding goal within a few days. In February 2017, uSens announced that it would refund all Kickstarter backers.uSens announced a $20 million Series A funding round in June 2016 led by Fosun Kinzon Capital. Additional participants included returning investor Maison Capital, joined by new investors Great Capital, Fortune Capital, Oriental Fortune Capital, iResearch Capital, Chord|9| Capital, and ARM|10| Innovation Ecosystem Accelerator. The company previously received a pre-Series A investment of $5.5 million from co-led by IDG Ventures, Lebox Capital and Maison Capital.
+The co-founder|2| of uSens, Dr. Yue Fei, is a researcher in the field of 3D user interfaces and virtual reality who earned his PhD from Rice University in Space Physics.uSens|3| has developed products in the area of HCI, such as the Fingo Virtual Touch, selling in China. Fingo Virtual Touch uses the company’s patented Fingo technology. Fingo is the hardware and software that uSens has developed to allow a user to interact with a digital interface, like a smart TV|4| without the need to touch any surface; it can sense finger movements and hand gestures. It consists of a small sensor and a set of software algorithms that automatically “sense” and translate hand gestures|5| into movements onscreen.In March 2015, the company launched a Kickstarter campaign to fund a VR/AR hardware product, reaching its initial funding goal within a few days. In February 2017, uSens announced that it would refund all Kickstarter backers.uSens announced a $20 million Series A funding round in June 2016 led by Fosun Kinzon Capital. Additional participants included returning investor Maison Capital, joined by new investors Great Capital, Fortune Capital, Oriental Fortune Capital, iResearch Capital, Chord|6| Capital, and ARM|7| Innovation Ecosystem Accelerator. The company previously received a pre-Series A investment of $5.5 million from co-led by IDG Ventures, Lebox Capital and Maison Capital.
 
 
 == See also ==
-Augmented|11| reality
+Augmented reality
 Gesture recognition
 Mixed reality
 Motion capture

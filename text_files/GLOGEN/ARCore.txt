@@ -1,11 +1,10 @@
 ===GLOGEN GLOSSARY===
 
-|1| augmented : (general) simple past tense and past participle of augment
-|2| ARCore : (wiki) ARCore, also known as Google Play Services for AR, is a software development kit developed by Google that allows for augmented reality applications to be built.
+|1| ARCore : (wiki) ARCore, also known as Google Play Services for AR, is a software development kit developed by Google that allows for augmented reality applications to be built.
 
 ===DOCUMENT BODY===
 
-ARCore, also known as Google Play Services for AR, is a software development kit developed by Google that allows for augmented|0| reality applications to be built.
+ARCore, also known as Google Play Services for AR, is a software development kit developed by Google that allows for augmented reality applications to be built.
 ARCore|1| uses three key technologies to integrate virtual content with the real world as seen through your phone's camera:
 Six degrees of freedom allows the phone to understand and track its position relative to the world.
 Environmental understanding allows the phone to detect the size and location of flat horizontal surfaces like the ground or a coffee table.

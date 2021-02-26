@@ -1,0 +1,1174 @@
+===GLOGEN GLOSSARY===
+
+|1| partitioning : (general) The act or result of dividing into partitions; an arrangement of partitions. (general) plural of partition
+|2| quantifies : (general) Third-person singular simple present indicative form of quantify. (general) To assign a quantity to
+|3| partitions : (general) plural of partition. (general) A part of something that has been divided
+
+===DOCUMENT BODY===
+
+In probability theory and information theory, adjusted mutual information, a variation of mutual information may be used for comparing clusterings. It corrects the effect of agreement solely due to chance between clusterings, similar to the way the adjusted rand index corrects the Rand index. It is closely related to variation of information: when a similar adjustment is made to the VI index, it becomes equivalent to the AMI. The adjusted measure however is no longer metrical.
+
+
+== Mutual information of two partitions ==
+Given a set S of N elements 
+  
+    
+      
+        S
+        =
+        {
+        
+          s
+          
+            1
+          
+        
+        ,
+        
+          s
+          
+            2
+          
+        
+        ,
+        …
+        
+          s
+          
+            N
+          
+        
+        }
+      
+    
+    {\displaystyle S=\{s_{1},s_{2},\ldots s_{N}\}}
+  , consider two partitions of S, namely 
+  
+    
+      
+        U
+        =
+        {
+        
+          U
+          
+            1
+          
+        
+        ,
+        
+          U
+          
+            2
+          
+        
+        ,
+        …
+        ,
+        
+          U
+          
+            R
+          
+        
+        }
+      
+    
+    {\displaystyle U=\{U_{1},U_{2},\ldots ,U_{R}\}}
+   with R clusters, and 
+  
+    
+      
+        V
+        =
+        {
+        
+          V
+          
+            1
+          
+        
+        ,
+        
+          V
+          
+            2
+          
+        
+        ,
+        …
+        ,
+        
+          V
+          
+            C
+          
+        
+        }
+      
+    
+    {\displaystyle V=\{V_{1},V_{2},\ldots ,V_{C}\}}
+   with C clusters.  It is presumed here that the partitions are so-called hard clusters; the partitions are pairwise disjoint:
+
+  
+    
+      
+        
+          U
+          
+            i
+          
+        
+        ∩
+        
+          U
+          
+            j
+          
+        
+        =
+        ∅
+        =
+        
+          V
+          
+            i
+          
+        
+        ∩
+        
+          V
+          
+            j
+          
+        
+      
+    
+    {\displaystyle U_{i}\cap U_{j}=\varnothing =V_{i}\cap V_{j}}
+  for all 
+  
+    
+      
+        i
+        ≠
+        j
+      
+    
+    {\displaystyle i\neq j}
+  , and complete:
+
+  
+    
+      
+        
+          ∪
+          
+            i
+            =
+            1
+          
+          
+            R
+          
+        
+        
+          U
+          
+            i
+          
+        
+        =
+        
+          ∪
+          
+            j
+            =
+            1
+          
+          
+            C
+          
+        
+        
+          V
+          
+            j
+          
+        
+        =
+        S
+      
+    
+    {\displaystyle \cup _{i=1}^{R}U_{i}=\cup _{j=1}^{C}V_{j}=S}
+  The mutual information of cluster overlap between U and V can be summarized in the form of an RxC contingency table 
+  
+    
+      
+        M
+        =
+        [
+        
+          n
+          
+            i
+            j
+          
+        
+        
+          ]
+          
+            j
+            =
+            1
+            …
+            C
+          
+          
+            i
+            =
+            1
+            …
+            R
+          
+        
+      
+    
+    {\displaystyle M=[n_{ij}]_{j=1\ldots C}^{i=1\ldots R}}
+  , where 
+  
+    
+      
+        
+          n
+          
+            i
+            j
+          
+        
+      
+    
+    {\displaystyle n_{ij}}
+   denotes the number of objects that are common to clusters 
+  
+    
+      
+        
+          U
+          
+            i
+          
+        
+      
+    
+    {\displaystyle U_{i}}
+   and 
+  
+    
+      
+        
+          V
+          
+            j
+          
+        
+      
+    
+    {\displaystyle V_{j}}
+  .  That is,
+
+  
+    
+      
+        
+          n
+          
+            i
+            j
+          
+        
+        =
+        
+          |
+          
+            
+              U
+              
+                i
+              
+            
+            ∩
+            
+              V
+              
+                j
+              
+            
+          
+          |
+        
+      
+    
+    {\displaystyle n_{ij}=\left|U_{i}\cap V_{j}\right|}
+  Suppose an object is picked at random from S; the probability that the object falls into cluster 
+  
+    
+      
+        
+          U
+          
+            i
+          
+        
+      
+    
+    {\displaystyle U_{i}}
+   is:
+
+  
+    
+      
+        
+          P
+          
+            U
+          
+        
+        (
+        i
+        )
+        =
+        
+          
+            
+              
+                |
+              
+              
+                U
+                
+                  i
+                
+              
+              
+                |
+              
+            
+            N
+          
+        
+      
+    
+    {\displaystyle P_{U}(i)={\frac {|U_{i}|}{N}}}
+  The entropy associated with the partitioning|1| U is:
+
+  
+    
+      
+        H
+        (
+        U
+        )
+        =
+        −
+        
+          ∑
+          
+            i
+            =
+            1
+          
+          
+            R
+          
+        
+        
+          P
+          
+            U
+          
+        
+        (
+        i
+        )
+        log
+        ⁡
+        
+          P
+          
+            U
+          
+        
+        (
+        i
+        )
+      
+    
+    {\displaystyle H(U)=-\sum _{i=1}^{R}P_{U}(i)\log P_{U}(i)}
+  H(U) is non-negative and takes the value 0 only when there is no uncertainty determining an object's cluster membership, i.e., when there is only one cluster. Similarly, the entropy of the clustering V can be calculated as:
+
+  
+    
+      
+        H
+        (
+        V
+        )
+        =
+        −
+        
+          ∑
+          
+            j
+            =
+            1
+          
+          
+            C
+          
+        
+        
+          P
+          
+            V
+          
+        
+        (
+        j
+        )
+        log
+        ⁡
+        
+          P
+          
+            V
+          
+        
+        (
+        j
+        )
+      
+    
+    {\displaystyle H(V)=-\sum _{j=1}^{C}P_{V}(j)\log P_{V}(j)}
+  where 
+  
+    
+      
+        
+          P
+          
+            V
+          
+        
+        (
+        j
+        )
+        =
+        
+          
+            |
+          
+          
+            V
+            
+              j
+            
+          
+          
+            |
+          
+        
+        
+          /
+        
+        
+          N
+        
+      
+    
+    {\displaystyle P_{V}(j)={|V_{j}|}/{N}}
+  . The mutual information (MI) between two partitions:
+
+  
+    
+      
+        M
+        I
+        (
+        U
+        ,
+        V
+        )
+        =
+        
+          ∑
+          
+            i
+            =
+            1
+          
+          
+            R
+          
+        
+        
+          ∑
+          
+            j
+            =
+            1
+          
+          
+            C
+          
+        
+        
+          P
+          
+            U
+            V
+          
+        
+        (
+        i
+        ,
+        j
+        )
+        log
+        ⁡
+        
+          
+            
+              
+                P
+                
+                  U
+                  V
+                
+              
+              (
+              i
+              ,
+              j
+              )
+            
+            
+              
+                P
+                
+                  U
+                
+              
+              (
+              i
+              )
+              
+                P
+                
+                  V
+                
+              
+              (
+              j
+              )
+            
+          
+        
+      
+    
+    {\displaystyle MI(U,V)=\sum _{i=1}^{R}\sum _{j=1}^{C}P_{UV}(i,j)\log {\frac {P_{UV}(i,j)}{P_{U}(i)P_{V}(j)}}}
+  where 
+  
+    
+      
+        
+          P
+          
+            U
+            V
+          
+        
+        (
+        i
+        ,
+        j
+        )
+      
+    
+    {\displaystyle P_{UV}(i,j)}
+   denotes the probability that a point belongs to both the cluster 
+  
+    
+      
+        
+          U
+          
+            i
+          
+        
+      
+    
+    {\displaystyle U_{i}}
+   in U and cluster 
+  
+    
+      
+        
+          V
+          
+            j
+          
+        
+      
+    
+    {\displaystyle V_{j}}
+   in V:
+
+  
+    
+      
+        
+          P
+          
+            U
+            V
+          
+        
+        (
+        i
+        ,
+        j
+        )
+        =
+        
+          
+            
+              
+                |
+              
+              
+                U
+                
+                  i
+                
+              
+              ∩
+              
+                V
+                
+                  j
+                
+              
+              
+                |
+              
+            
+            N
+          
+        
+      
+    
+    {\displaystyle P_{UV}(i,j)={\frac {|U_{i}\cap V_{j}|}{N}}}
+  MI is a non-negative quantity upper bounded by the entropies H(U) and H(V). It quantifies|2| the information shared by the two clusterings and thus can be employed as a clustering similarity measure.
+
+
+== Adjustment for chance ==
+Like the Rand index, the baseline value of mutual information between two random clusterings does not take on a constant value, and tends to be larger when the two partitions|3| have a larger number of clusters (with a fixed number of set elements N).
+By adopting a hypergeometric model of randomness, it can be shown that the expected mutual information between two random clusterings is:
+
+  
+    
+      
+        
+          
+            
+              
+                E
+                {
+                M
+                I
+                (
+                U
+                ,
+                V
+                )
+                }
+                =
+              
+              
+                
+                
+                  ∑
+                  
+                    i
+                    =
+                    1
+                  
+                  
+                    R
+                  
+                
+                
+                  ∑
+                  
+                    j
+                    =
+                    1
+                  
+                  
+                    C
+                  
+                
+                
+                  ∑
+                  
+                    
+                      n
+                      
+                        i
+                        j
+                      
+                    
+                    =
+                    (
+                    
+                      a
+                      
+                        i
+                      
+                    
+                    +
+                    
+                      b
+                      
+                        j
+                      
+                    
+                    −
+                    N
+                    
+                      )
+                      
+                        +
+                      
+                    
+                  
+                  
+                    min
+                    (
+                    
+                      a
+                      
+                        i
+                      
+                    
+                    ,
+                    
+                      b
+                      
+                        j
+                      
+                    
+                    )
+                  
+                
+                
+                  
+                    
+                      n
+                      
+                        i
+                        j
+                      
+                    
+                    N
+                  
+                
+                log
+                ⁡
+                
+                  (
+                  
+                    
+                      
+                        N
+                        ⋅
+                        
+                          n
+                          
+                            i
+                            j
+                          
+                        
+                      
+                      
+                        
+                          a
+                          
+                            i
+                          
+                        
+                        
+                          b
+                          
+                            j
+                          
+                        
+                      
+                    
+                  
+                  )
+                
+                ×
+              
+            
+            
+              
+              
+                
+                  
+                    
+                      
+                        a
+                        
+                          i
+                        
+                      
+                      !
+                      
+                        b
+                        
+                          j
+                        
+                      
+                      !
+                      (
+                      N
+                      −
+                      
+                        a
+                        
+                          i
+                        
+                      
+                      )
+                      !
+                      (
+                      N
+                      −
+                      
+                        b
+                        
+                          j
+                        
+                      
+                      )
+                      !
+                    
+                    
+                      N
+                      !
+                      
+                        n
+                        
+                          i
+                          j
+                        
+                      
+                      !
+                      (
+                      
+                        a
+                        
+                          i
+                        
+                      
+                      −
+                      
+                        n
+                        
+                          i
+                          j
+                        
+                      
+                      )
+                      !
+                      (
+                      
+                        b
+                        
+                          j
+                        
+                      
+                      −
+                      
+                        n
+                        
+                          i
+                          j
+                        
+                      
+                      )
+                      !
+                      (
+                      N
+                      −
+                      
+                        a
+                        
+                          i
+                        
+                      
+                      −
+                      
+                        b
+                        
+                          j
+                        
+                      
+                      +
+                      
+                        n
+                        
+                          i
+                          j
+                        
+                      
+                      )
+                      !
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}E\{MI(U,V)\}=&\sum _{i=1}^{R}\sum _{j=1}^{C}\sum _{n_{ij}=(a_{i}+b_{j}-N)^{+}}^{\min(a_{i},b_{j})}{\frac {n_{ij}}{N}}\log \left({\frac {N\cdot n_{ij}}{a_{i}b_{j}}}\right)\times \\&{\frac {a_{i}!b_{j}!(N-a_{i})!(N-b_{j})!}{N!n_{ij}!(a_{i}-n_{ij})!(b_{j}-n_{ij})!(N-a_{i}-b_{j}+n_{ij})!}}\\\end{aligned}}}
+  where 
+  
+    
+      
+        (
+        
+          a
+          
+            i
+          
+        
+        +
+        
+          b
+          
+            j
+          
+        
+        −
+        N
+        
+          )
+          
+            +
+          
+        
+      
+    
+    {\displaystyle (a_{i}+b_{j}-N)^{+}}
+  
+denotes 
+  
+    
+      
+        max
+        (
+        1
+        ,
+        
+          a
+          
+            i
+          
+        
+        +
+        
+          b
+          
+            j
+          
+        
+        −
+        N
+        )
+      
+    
+    {\displaystyle \max(1,a_{i}+b_{j}-N)}
+  .  The variables 
+  
+    
+      
+        
+          a
+          
+            i
+          
+        
+      
+    
+    {\displaystyle a_{i}}
+   and 
+  
+    
+      
+        
+          b
+          
+            j
+          
+        
+      
+    
+    {\displaystyle b_{j}}
+   are partial sums of the contingency table; that is,
+
+  
+    
+      
+        
+          a
+          
+            i
+          
+        
+        =
+        
+          ∑
+          
+            j
+            =
+            1
+          
+          
+            C
+          
+        
+        
+          n
+          
+            i
+            j
+          
+        
+      
+    
+    {\displaystyle a_{i}=\sum _{j=1}^{C}n_{ij}}
+  and
+
+  
+    
+      
+        
+          b
+          
+            j
+          
+        
+        =
+        
+          ∑
+          
+            i
+            =
+            1
+          
+          
+            R
+          
+        
+        
+          n
+          
+            i
+            j
+          
+        
+      
+    
+    {\displaystyle b_{j}=\sum _{i=1}^{R}n_{ij}}
+  The adjusted measure for the mutual information may then be defined to be:
+
+  
+    
+      
+        A
+        M
+        I
+        (
+        U
+        ,
+        V
+        )
+        =
+        
+          
+            
+              M
+              I
+              (
+              U
+              ,
+              V
+              )
+              −
+              E
+              {
+              M
+              I
+              (
+              U
+              ,
+              V
+              )
+              }
+            
+            
+              max
+              
+                {
+                H
+                (
+                U
+                )
+                ,
+                H
+                (
+                V
+                )
+                }
+              
+              −
+              E
+              {
+              M
+              I
+              (
+              U
+              ,
+              V
+              )
+              }
+            
+          
+        
+      
+    
+    {\displaystyle AMI(U,V)={\frac {MI(U,V)-E\{MI(U,V)\}}{\max {\{H(U),H(V)\}}-E\{MI(U,V)\}}}}
+  .The AMI takes a value of 1 when the two partitions are identical and 0 when the MI between two partitions equals the value expected due to chance alone.
+
+
+== References ==
+
+
+== External links ==
+Matlab code for computing the adjusted mutual information
+R code for fast and parallel calculation of adjusted mutual information
+Python code for computing the adjusted mutual information

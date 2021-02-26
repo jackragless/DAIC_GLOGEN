@@ -1,0 +1,1157 @@
+===GLOGEN GLOSSARY===
+
+|1| loosely : (general) Approximately
+|2| large deviations : (wiki) In probability theory, the theory of large deviations concerns the asymptotic behaviour of remote tails of sequences of probability distributions.
+|3| ergodic : (statistics, engineering) Of or relating to a process in which every sequence or sample of sufficient size is equally representative of the whole
+|4| discrete-time : (wiki) In mathematical dynamics, discrete time and continuous time are two alternative frameworks within which to model variables that evolve over time.
+|5| interpolation : (computing) The process of including and processing externally-fetched data in a document or program; see interpolate. 
+|6| time-invariant : (general) That does not vary over time
+|7| non-stationary : (general) Not stationary; moving
+|8| homogeneous : (mathematics) Of which the properties of a smaller set apply to the whole; scalable
+|9| injective : (mathematics) of, relating to, or being an injection: such that each element of the image (or range) is associated with at most one element of the preimage (or domain); inverse-deterministic
+Synonym: one-to-one
+|10| ISBN : (general) Initialism of International Standard Book Number
+
+===DOCUMENT BODY===
+
+In information theory, the asymptotic equipartition property (AEP) is a general property of the output samples of a stochastic source. It is fundamental to the concept of typical set used in theories of data compression.
+Roughly speaking, the theorem states that although there are many series of results that may be produced by a random process, the one actually produced is most probably from a loosely|1| defined set of outcomes that all have approximately the same chance of being the one actually realized. (This is a consequence of the law of large numbers and ergodic theory.) Although there are individual outcomes which have a higher probability than any outcome in this set, the vast number of outcomes in the set almost guarantees that the outcome will come from the set. One way of intuitively understanding the property is through Cramér's large deviation theorem, which states that the probability of a large deviation from mean decays exponentially with the number of samples. Such results are studied in large deviations|2| theory; intuitively, it is the large deviations that would violate equipartition, but these are unlikely.
+In the field of pseudorandom number generation, a candidate generator of undetermined quality whose output sequence lies too far outside the typical set by some statistical criteria is rejected as insufficiently random. Thus, although the typical set is loosely defined, practical notions arise concerning sufficient typicality.
+
+
+== Definition ==
+Given a discrete-time stationary ergodic|3| stochastic process 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+   on the probability space 
+  
+    
+      
+        (
+        Ω
+        ,
+        B
+        ,
+        p
+        )
+      
+    
+    {\displaystyle (\Omega ,B,p)}
+  , the asymptotic equipartition property is an assertion that
+
+  
+    
+      
+        −
+        
+          
+            1
+            n
+          
+        
+        log
+        ⁡
+        p
+        (
+        
+          X
+          
+            1
+          
+        
+        ,
+        
+          X
+          
+            2
+          
+        
+        ,
+        …
+        ,
+        
+          X
+          
+            n
+          
+        
+        )
+        →
+        H
+        (
+        X
+        )
+        
+        
+           as 
+        
+        
+        n
+        →
+        ∞
+      
+    
+    {\displaystyle -{\frac {1}{n}}\log p(X_{1},X_{2},\dots ,X_{n})\to H(X)\quad {\text{ as }}\quad n\to \infty }
+  where 
+  
+    
+      
+        H
+        (
+        X
+        )
+      
+    
+    {\displaystyle H(X)}
+   or simply 
+  
+    
+      
+        H
+      
+    
+    {\displaystyle H}
+   denotes the entropy rate of 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  , which must exist for all discrete-time|4| stationary processes including the ergodic ones. The asymptotic equipartition property is proved for finite-valued (i.e. 
+  
+    
+      
+        
+          |
+        
+        Ω
+        
+          |
+        
+        <
+        ∞
+      
+    
+    {\displaystyle |\Omega |<\infty }
+  ) stationary ergodic stochastic processes in the Shannon–McMillan–Breiman theorem using the ergodic theory and for any i.i.d. sources directly using the law of large numbers in both the discrete-valued case (where 
+  
+    
+      
+        H
+      
+    
+    {\displaystyle H}
+   is simply the entropy of a symbol) and the continuous-valued case (where H is the differential entropy instead). The definition of the asymptotic equipartition property can also be extended for certain classes of continuous-time stochastic processes for which a typical set exists for long enough observation time. The convergence is proven almost sure in all cases.
+
+
+== Discrete-time i.i.d. sources ==
+Given 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+   is an i.i.d. source which may take values in the alphabet 
+  
+    
+      
+        
+          
+            X
+          
+        
+      
+    
+    {\displaystyle {\mathcal {X}}}
+  , its time series 
+  
+    
+      
+        
+          X
+          
+            1
+          
+        
+        ,
+        …
+        ,
+        
+          X
+          
+            n
+          
+        
+      
+    
+    {\displaystyle X_{1},\ldots ,X_{n}}
+   is i.i.d. with entropy 
+  
+    
+      
+        H
+        (
+        X
+        )
+      
+    
+    {\displaystyle H(X)}
+  . The weak law of large numbers gives the asymptotic equipartition property with convergence in probability,
+
+  
+    
+      
+        
+          lim
+          
+            n
+            →
+            ∞
+          
+        
+        Pr
+        
+          [
+          
+            
+              |
+              
+                −
+                
+                  
+                    1
+                    n
+                  
+                
+                log
+                ⁡
+                p
+                (
+                
+                  X
+                  
+                    1
+                  
+                
+                ,
+                
+                  X
+                  
+                    2
+                  
+                
+                ,
+                …
+                ,
+                
+                  X
+                  
+                    n
+                  
+                
+                )
+                −
+                H
+                (
+                X
+                )
+              
+              |
+            
+            >
+            ϵ
+          
+          ]
+        
+        =
+        0
+        
+        ∀
+        ϵ
+        >
+        0.
+      
+    
+    {\displaystyle \lim _{n\to \infty }\Pr \left[\left|-{\frac {1}{n}}\log p(X_{1},X_{2},\ldots ,X_{n})-H(X)\right|>\epsilon \right]=0\qquad \forall \epsilon >0.}
+  since the entropy is equal to the expectation of 
+
+  
+    
+      
+        −
+        
+          
+            1
+            n
+          
+        
+        log
+        ⁡
+        p
+        (
+        
+          X
+          
+            1
+          
+        
+        ,
+        
+          X
+          
+            2
+          
+        
+        ,
+        …
+        ,
+        
+          X
+          
+            n
+          
+        
+        )
+        .
+      
+    
+    {\displaystyle -{\frac {1}{n}}\log p(X_{1},X_{2},\ldots ,X_{n}).}
+  The strong law of large numbers asserts the stronger almost sure convergence,
+
+  
+    
+      
+        Pr
+        
+          [
+          
+            
+              lim
+              
+                n
+                →
+                ∞
+              
+            
+            −
+            
+              
+                1
+                n
+              
+            
+            log
+            ⁡
+            p
+            (
+            
+              X
+              
+                1
+              
+            
+            ,
+            
+              X
+              
+                2
+              
+            
+            ,
+            …
+            ,
+            
+              X
+              
+                n
+              
+            
+            )
+            =
+            H
+            (
+            X
+            )
+          
+          ]
+        
+        =
+        1.
+      
+    
+    {\displaystyle \Pr \left[\lim _{n\to \infty }-{\frac {1}{n}}\log p(X_{1},X_{2},\ldots ,X_{n})=H(X)\right]=1.}
+  
+
+
+== Discrete-time finite-valued stationary ergodic sources ==
+Consider a finite-valued sample space 
+  
+    
+      
+        Ω
+      
+    
+    {\displaystyle \Omega }
+  , i.e. 
+  
+    
+      
+        
+          |
+        
+        Ω
+        
+          |
+        
+        <
+        ∞
+      
+    
+    {\displaystyle |\Omega |<\infty }
+  , for the discrete-time stationary ergodic process 
+  
+    
+      
+        X
+        :=
+        {
+        
+          X
+          
+            n
+          
+        
+        }
+      
+    
+    {\displaystyle X:=\{X_{n}\}}
+   defined on the probability space 
+  
+    
+      
+        (
+        Ω
+        ,
+        B
+        ,
+        p
+        )
+      
+    
+    {\displaystyle (\Omega ,B,p)}
+  . The asymptotic equipartition property for such stochastic source is known as the Shannon–McMillan–Breiman theorem, due to Claude Shannon, Brockway McMillan, and Leo Breiman.
+
+
+== Non-stationary discrete-time source producing independent symbols ==
+The assumptions of stationarity/ergodicity/identical distribution of random variables is not essential for the asymptotic equipartition property to hold. Indeed, as is quite clear intuitively, the asymptotic equipartition property requires only some form of the law of large numbers to hold, which is fairly general. However, the expression needs to be suitably generalized, and the conditions need to be formulated precisely.
+We assume that the source is producing independent symbols, with possibly different output statistics at each instant. We assume that the statistics of the process are known completely, that is, the marginal distribution of the process seen at each time instant is known. The joint distribution is just the product of marginals. Then, under the condition (which can be relaxed) that 
+  
+    
+      
+        
+          V
+          a
+          r
+        
+        [
+        log
+        ⁡
+        p
+        (
+        
+          X
+          
+            i
+          
+        
+        )
+        ]
+        <
+        M
+      
+    
+    {\displaystyle \mathrm {Var} [\log p(X_{i})]<M}
+   for all i, for some M > 0, the following holds (AEP):
+
+  
+    
+      
+        
+          lim
+          
+            n
+            →
+            ∞
+          
+        
+        Pr
+        
+          [
+          
+            
+            
+              |
+              
+                −
+                
+                  
+                    1
+                    n
+                  
+                
+                log
+                ⁡
+                p
+                (
+                
+                  X
+                  
+                    1
+                  
+                
+                ,
+                
+                  X
+                  
+                    2
+                  
+                
+                ,
+                …
+                ,
+                
+                  X
+                  
+                    n
+                  
+                
+                )
+                −
+                
+                  
+                    
+                      H
+                      ¯
+                    
+                  
+                  
+                    n
+                  
+                
+                (
+                X
+                )
+              
+              |
+            
+            <
+            ϵ
+          
+          ]
+        
+        =
+        1
+        
+        ∀
+        ϵ
+        >
+        0
+      
+    
+    {\displaystyle \lim _{n\to \infty }\Pr \left[\,\left|-{\frac {1}{n}}\log p(X_{1},X_{2},\ldots ,X_{n})-{\overline {H}}_{n}(X)\right|<\epsilon \right]=1\qquad \forall \epsilon >0}
+  where 
+
+  
+    
+      
+        
+          
+            
+              H
+              ¯
+            
+          
+          
+            n
+          
+        
+        (
+        X
+        )
+        =
+        
+          
+            1
+            n
+          
+        
+        H
+        (
+        
+          X
+          
+            1
+          
+        
+        ,
+        
+          X
+          
+            2
+          
+        
+        ,
+        …
+        ,
+        
+          X
+          
+            n
+          
+        
+        )
+      
+    
+    {\displaystyle {\overline {H}}_{n}(X)={\frac {1}{n}}H(X_{1},X_{2},\ldots ,X_{n})}
+  
+
+
+=== Applications ===
+The asymptotic equipartition property for non-stationary discrete-time independent process leads us to (among other results) the source coding theorem for non-stationary source (with independent output symbols) and noisy-channel coding theorem for non-stationary memoryless channels.
+
+
+== Continuous-time stationary ergodic sources ==
+Discrete-time functions can be interpolated to continuous-time functions. If such interpolation|5| f is measurable, we may define the continuous-time stationary process accordingly as 
+  
+    
+      
+        
+          
+            
+              X
+              ~
+            
+          
+        
+        :=
+        f
+        ∘
+        X
+      
+    
+    {\displaystyle {\tilde {X}}:=f\circ X}
+  . If the asymptotic equipartition property holds for the discrete-time process, as in the i.i.d. or finite-valued stationary ergodic cases shown above, it automatically holds for the continuous-time stationary process derived from it by some measurable interpolation. i.e.
+
+  
+    
+      
+        −
+        
+          
+            1
+            n
+          
+        
+        log
+        ⁡
+        p
+        (
+        
+          
+            
+              
+                X
+                ~
+              
+            
+          
+          
+            0
+          
+          
+            τ
+          
+        
+        )
+        →
+        H
+        (
+        X
+        )
+      
+    
+    {\displaystyle -{\frac {1}{n}}\log p({\tilde {X}}_{0}^{\tau })\to H(X)}
+  where n corresponds to the degree of freedom in time τ. nH(X)/τ and H(X) are the entropy per unit time and per degree of freedom respectively, defined by Shannon.
+An important class of such continuous-time stationary process is the bandlimited stationary ergodic process with the sample space being a subset of the continuous 
+  
+    
+      
+        
+          
+            
+              L
+            
+          
+          
+            2
+          
+        
+      
+    
+    {\displaystyle {\mathcal {L}}_{2}}
+   functions. The asymptotic equipartition property holds if the process is white, in which case the time samples are i.i.d., or there exists T > 1/2W, where W is the nominal bandwidth, such that the T-spaced time samples take values in a finite set, in which case we have the discrete-time finite-valued stationary ergodic process.
+Any time-invariant|6| operations also preserves the asymptotic equipartition property, stationarity and ergodicity and we may easily turn a stationary process to non-stationary|7| without losing the asymptotic equipartition property by nulling out a finite number of time samples in the process.
+
+
+== Category theory ==
+A category theoretic definition for the equipartition property is given by Gromov. Given a sequence of Cartesian powers 
+  
+    
+      
+        
+          P
+          
+            N
+          
+        
+        =
+        P
+        ×
+        ⋯
+        ×
+        P
+      
+    
+    {\displaystyle P^{N}=P\times \cdots \times P}
+   of a measure space P, this sequence admits an asymptotically equivalent sequence HN of homogeneous|8| measure spaces (i.e. all sets have the same measure; all morphisms are invariant under the group of automorphisms, and thus factor as a morphism to the terminal object) .
+The above requires a definition of asymptotic equivalence. This is given in terms of a distance function, giving how much an injective|9| correspondence differs from an isomorphism.  An injective correspondence 
+  
+    
+      
+        π
+        :
+        P
+        →
+        Q
+      
+    
+    {\displaystyle \pi :P\to Q}
+   is a partially defined map that is a bijection; that is, it is a bijection between a subset 
+  
+    
+      
+        
+          P
+          ′
+        
+        ⊂
+        P
+      
+    
+    {\displaystyle P'\subset P}
+   and 
+  
+    
+      
+        
+          Q
+          ′
+        
+        ⊂
+        Q
+      
+    
+    {\displaystyle Q'\subset Q}
+  .  Then define
+
+  
+    
+      
+        
+          |
+        
+        P
+        −
+        Q
+        
+          
+            |
+          
+          
+            π
+          
+        
+        =
+        
+          |
+        
+        P
+        ∖
+        
+          P
+          ′
+        
+        
+          |
+        
+        +
+        
+          |
+        
+        Q
+        ∖
+        
+          Q
+          ′
+        
+        
+          |
+        
+      
+    
+    {\displaystyle |P-Q|_{\pi }=|P\smallsetminus P'|+|Q\smallsetminus Q'|}
+  where |S| denotes the measure of a set S.  In what follows, the measure of P and Q are taken to be 1, so that the measure spaces are probability spaces. This distance 
+  
+    
+      
+        
+          |
+        
+        P
+        −
+        Q
+        
+          
+            |
+          
+          
+            π
+          
+        
+      
+    
+    {\displaystyle |P-Q|_{\pi }}
+   is commonly known as the earth mover's distance or Wasserstein metric.
+Similarly, define
+
+  
+    
+      
+        
+          |
+        
+        log
+        ⁡
+        P
+        :
+        Q
+        
+          
+            |
+          
+          
+            π
+          
+        
+        =
+        
+          
+            
+              
+                sup
+                
+                  p
+                  ∈
+                  
+                    P
+                    
+                      
+                        
+                        ′
+                      
+                    
+                  
+                
+              
+              
+                |
+              
+              log
+              ⁡
+              p
+              −
+              log
+              ⁡
+              π
+              (
+              p
+              )
+              
+                |
+              
+            
+            
+              log
+              ⁡
+              min
+              
+                (
+                
+                  
+                    |
+                  
+                  set
+                  ⁡
+                  (
+                  
+                    P
+                    ′
+                  
+                  )
+                  
+                    |
+                  
+                  ,
+                  
+                    |
+                  
+                  set
+                  ⁡
+                  (
+                  
+                    Q
+                    ′
+                  
+                  )
+                  
+                    |
+                  
+                
+                )
+              
+            
+          
+        
+      
+    
+    {\displaystyle |\log P:Q|_{\pi }={\frac {\sup _{p\in P^{'}}|\log p-\log \pi (p)|}{\log \min \left(|\operatorname {set} (P')|,|\operatorname {set} (Q')|\right)}}}
+  with 
+  
+    
+      
+        
+          |
+        
+        set
+        ⁡
+        (
+        P
+        )
+        
+          |
+        
+      
+    
+    {\displaystyle |\operatorname {set} (P)|}
+   taken to be the counting measure on P.  Thus, this definition requires that P be a finite measure space.  Finally, let
+
+  
+    
+      
+        
+          
+            dist
+          
+          
+            π
+          
+        
+        (
+        P
+        ,
+        Q
+        )
+        =
+        
+          |
+        
+        P
+        −
+        Q
+        
+          
+            |
+          
+          
+            π
+          
+        
+        +
+        
+          |
+        
+        log
+        ⁡
+        P
+        :
+        Q
+        
+          
+            |
+          
+          
+            π
+          
+        
+      
+    
+    {\displaystyle {\text{dist}}_{\pi }(P,Q)=|P-Q|_{\pi }+|\log P:Q|_{\pi }}
+  A sequence of injective correspondences 
+  
+    
+      
+        
+          π
+          
+            N
+          
+        
+        :
+        
+          P
+          
+            N
+          
+        
+        →
+        
+          Q
+          
+            N
+          
+        
+      
+    
+    {\displaystyle \pi _{N}:P_{N}\to Q_{N}}
+   are then asymptotically equivalent when
+
+  
+    
+      
+        
+          
+            dist
+          
+          
+            
+              π
+              
+                N
+              
+            
+          
+        
+        (
+        
+          P
+          
+            N
+          
+        
+        ,
+        
+          Q
+          
+            N
+          
+        
+        )
+        →
+        0
+        
+        
+           as 
+        
+        
+        N
+        →
+        ∞
+      
+    
+    {\displaystyle {\text{dist}}_{\pi _{N}}(P_{N},Q_{N})\to 0\quad {\text{ as }}\quad N\to \infty }
+  Given a homogenous space sequence HN that is asymptotically equivalent to PN, the entropy H(P) of P may be taken as
+
+  
+    
+      
+        H
+        (
+        P
+        )
+        =
+        
+          lim
+          
+            N
+            →
+            ∞
+          
+        
+        
+          
+            1
+            N
+          
+        
+        
+          |
+        
+        set
+        ⁡
+        (
+        
+          H
+          
+            N
+          
+        
+        )
+        
+          |
+        
+      
+    
+    {\displaystyle H(P)=\lim _{N\to \infty }{\frac {1}{N}}|\operatorname {set} (H_{N})|}
+  
+
+
+== See also ==
+Cramér's large deviation theorem
+Source coding theorem
+Noisy-channel coding theorem
+
+
+== Notes ==
+
+
+== References ==
+
+
+=== Journal articles ===
+Claude E. Shannon. "A Mathematical Theory of Communication". Bell System Technical Journal, July/October 1948.
+Algoet, Paul H.; Cover, Thomas M. (1988). "A Sandwich Proof of the Shannon-McMillan-Breiman Theorem" (PDF). The Annals of Probability. 16 (2): 899–909.
+Sergio Verdu and Te Sun Han. "The Role of the Asymptotic Equipartition Property in Noiseless Source Coding."  IEEE Transactions on Information Theory, 43(3): 847–857, 1997.
+
+
+=== Textbooks ===
+Cover, Thomas M.; Thomas, Joy A. (1991). Elements of Information Theory (first ed.). Hoboken, New Jersey: Wiley. ISBN|10| 978-0-471-24195-9.
+MacKay, David J.C. (2003). Information Theory, Inference, and Learning Algorithms. Cambridge University Press. ISBN 0-521-64298-1.

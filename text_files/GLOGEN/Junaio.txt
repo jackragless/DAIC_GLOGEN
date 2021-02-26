@@ -1,95 +1,30 @@
 ===GLOGEN GLOSSARY===
 
-|1| software technology : (wiki) Software is a collection of instructions and data that tell the computer how to work.
-|2| augmented : (general) simple past tense and past participle of augment
-|3| New York : invalid-pos
-|4| New York : (general) A county of the state of New York, coterminous with the Borough of Manhattan.
-|5| software development kit : (wiki) A software development kit (SDK) is a collection of software development tools in one installable package.
-|6| Metaio : (wiki) Metaio was a privately held Augmented Reality (AR) company that developed software technology and provided augmented reality solutions.
-|7| AR : invalid-pos
-|8| AR : invalid-pos
-|9| Android : (computing, mobile telephony) A mobile phone running on Android OS.
-|10| bootstrap : (general) A means of advancing oneself or accomplishing something without aid.
-|11| KPS : invalid-term
-|12| KPS : (US, measurement) Initialism of kilometers per second.
-|13| Unifeye : (wiki) UniKey Technologies is an alternative access control company based in the United States that designs and licenses keyless entry technology worldwide.
-|14| third-party developers : (wiki) A video game developer is a software developer specializing in video game development – the process and related disciplines of creating video games.
-|15| mobile devices : (general) An item of hand-held electronic equipment, especially a smartphone or tablet computer.
-|16| 2-D : invalid-pos
-|17| 2-D : invalid-pos
-|18| ISMAR : (wiki) Isaac is one of the three patriarchs of the Israelites and is an important figure in the Abrahamic religions, including Judaism, Christianity, and Islam.
-|19| SDK : invalid-pos
-|20| SDK : (computing) Initialism of software development kit
-|21| CVS : (software engineering) Initialism of Concurrent Versions System (a utility that assists in tracking changes to source code, etc.)
-|22| visualization : (computing) A visual representation of data.
-|23| virtuality : (general) A state of being virtual.
-|24| InsideAR : (wiki) InsideAR was the largest Augmented Reality event in Europe.
-|25| ST-Ericsson : (wiki) ST-Ericsson was a multinational manufacturer of wireless products and semiconductors, supplying to mobile device manufacturers.
-|26| 3D : invalid-pos
-|27| 3D : invalid-pos
+|1| API : (programming) Initialism of application programming interface
+|2| Junaio : (wiki) Junaio was an Augmented Reality browser designed for 3G and 4G mobile devices.
+|3| altitude : (general) Highest point or degree
+|4| Metaio : (wiki) Metaio was a privately held Augmented Reality (AR) company that developed software technology and provided augmented reality solutions.
+|5| AR : (computing, chiefly uncountable) Initialism of augmented reality
 
 ===DOCUMENT BODY===
 
-Metaio was a privately held Augmented Reality (AR) company that developed software technology|0| and provided augmented|1| reality solutions.
-Headquartered in Munich, Germany, with subsidiaries in San Francisco, California, New York|2| City, New York and Dallas, Texas, metaio provided a software development kit|3| (SDK) for programming PC, web, mobile and custom offline augmented reality applications.
-Additionally, Metaio|4| was the creator of Junaio, a free mobile AR|5| browser available for Android|6| and iOS devices.
-On 28 May 2015 it was reported that Metaio GmbH was acquired by Apple Inc for an undisclosed sum.
+Junaio was an Augmented Reality browser designed for 3G and 4G mobile devices. It was developed by Munich-based company Metaio GmbH. It provided a Creator application and an API|1| for developers and content providers to generate mobile Augmented Reality experiences for end-users. The smartphone app, for Android and iPhone platforms, and API were free to use.
+Junaio|2| was the first augmented reality browser which had overcome the accuracy limitations of GPS navigation through LLA Markers (latitude, longitude, altitude|3| marker, patent pending).In May 2015 Metaio|4| and all of the company's products were acquired by Apple. Subsequent to the purchase Junaio web presences were removed, and a planned Metaio conference was cancelled. Junaio and all Junaio channels were deactivated on 15 December 2015.
 
 
-== History ==
-Metaio was founded in 2003 in Munich, Germany by current CEO, Thomas Alt and current CTO, Peter Meier. The company grew out of an internal project within Volkswagen that received a German grant the founders used to bootstrap|7| their enterprise.
-In 2005 Metaio released the first end-consumer AR application called KPS|8| Click & Design in Germany which allowed the user to put virtual furniture in an image of their living room. In addition, metaio|9| also released the Unifeye|10| Platform which enabled third-party developers|11| to create their own commercial AR solutions. In 2006 metaio released the first browsing plug-in for web-based AR applications.
-Shortly thereafter, Metaio launched the first fully integrated AR application for mobile devices|12| with the release of the mobile AR browser Junaio.
-From 2010 to 2012, Metaio presented the first commercial 2-D|13| Markerless Feature tracking application for print and television on a consumer mobile device and as a result won the ISMAR|14| Tracking Contest in 2011.
-On May 23, 2015, Metaio ceased product licensing, cancelled all pending conferences, and posted this notice on their support site:Metaio products and subscriptions are no longer available for purchase.  Downloads of your previous purchases will be available until 15 December 2015, and active cloud subscriptions will be continued until expiration. Email support will continue until 30 June 2015.On May 28, 2015, TechCrunch and the Wall Street Journal reported that Apple had bought the company.
+== Overview of the technical infrastructure ==
+Within the Junaio app all deployed contents was organized in so-called channels. A channel could be created using the API (REST API) or 3rd party tools like ConnectAR, BuildAR, Metaio Creator, etc. The channels would then be uploaded to the server infrastructure behind the Junaio app, called Metaio Cloud.
+Users could open/load the available channels inside the Junaio app to get access to the according AR|5| contents and scenarios.
+The API was based on "AREL" (Augmented Reality Experience Language) which allows scripting of these channels based on common web technologies such as HTML5, XML and JavaScript.
 
 
-== Products ==
-Metaio offered products covering the needs of the AR value chain from product design, engineering, operations, marketing, sales and customer support.Metaio SDK|15| - The metaio SDK allows developers to use content without prior encryption. No offline tools or server side encryption is needed when generating and deploying 3D assets and tracking patterns. The SDK is currently supported on Android, iOS and Windows with an additional plugin for development in Unity for Android, iOS, Windows and OS X platforms.Metaio Creator - The metaio Creator is augmented reality software that allows users to create a complete AR scenario without specialized programming knowledge through a drag and drop interface.
-Metaio CVS|16| - Metaio Continuous Visual Search (CVS) manages marker searching online for instant image recognition
-Metaio Cloud - Allows developers to store and manage content online.
-Junaio – Junaio is an augmented reality browser which allows users to experience mobile augmented reality through multiple channels on their mobile devices.
-Metaio Engineer - Provides solutions for technical assignments from the visualization|17| of future facilities within a current production environment over illustrating working instructions on a component to deviation measurement between virtuality|18| and reality.
+== Uses ==
+In 2011, during the Occupy Wall Street protests, organizers encouraged the development and use of augmented reality features within the junaio application to supplement physical protests and overcome physical restrictions placed on them.
 
 
-== Events ==
-Since 2006 metaio has organized insideAR|19|, an annual event solely dedicated to Augmented Reality developers, researchers and businesses. In 2013 InsideAR was the world's largest augmented reality conference.
-
-
-== Press ==
-In 2011 Reuters wrote an article about metaio in collaboration with ST-Ericsson|20| announcing the company as "the world-wide leader in Augmented|21| Reality technology."
-In 2012 The Next Web announced: "…While there are a slew of apps that tap GPS, image recognition, visual search and other elements of augmented reality, junaio does a good job of merging them all."
-
-
-== Awards ==
-2014
-
-Auggies Award for the "Best Campaign"2013
-
-Volkswagen Augmented Reality Tracking Challenge
-ISMAR Best Poster2012
-
-Auggies Award for "Best AR Demo"2011
-
-ISMAR Tracking Contest Award for "World’s first mobile 3D|22| Tracking"
-Augmented Planet Reader's Choice Award for "Best AR Marketing Campaign" and "Best AR Developer Toolkit" for the metaio Mobile SDK
-Best Android AR App Ever – Second Place for "Best App Ever"2010
-
-Augmented Planet Reader's Choice Award – Runner up for "Best Augmented Reality"
-Innovationspreis des Jahres for "Virtual Dressing Room"2009
-
-"I caught their eye" Award, Winner in the Innovation for Tomorrow category2007
-
-First Prize at "Deutscher Internetpreis" (German Internet Award)2004
-
-Der Innovationspreis für zukunftsweisende Business-Ideen (The Innovation Award for Forward-Thinking Business Ideas)
+== See also ==
+LLA Marker
+Augmented reality
 
 
 == References ==
-
-
-== External links ==
-metaio home page - website for Augmented Reality
-metaio Augmented Reality Blog
-junaio home page
-Metaio Thermal Touch Technology

@@ -1,0 +1,20 @@
+===GLOGEN GLOSSARY===
+
+|1| depicting : (general) present participle of depict. (general) To render a representation of something, using words, sounds, images, or other means
+|2| dissipated : (general) simple past tense and past participle of dissipate. (transitive) To drive away, disperse
+|3| coherency : (general) The state of being coherent; a coherent relationship
+|4| ecosystems : (general) plural of ecosystem. (general) A system formed by an ecological community and its environment that functions as a unit
+|5| plotting : (general) present participle of plot. (transitive) To mark (a point on a graph, chart, etc)
+|6| autocatalytic : (chemistry, of a reaction) catalyzed by one of its own products
+
+===DOCUMENT BODY===
+
+Ascendency is a quantitative attribute of an ecosystem, defined as a function of the ecosystem's trophic network.  Ascendency is derived using mathematical tools from information theory.  It is intended to capture in a single index the ability of an ecosystem to prevail against disturbance by virtue of its combined organization and size.
+One way of depicting|1| ascendency is to regard it as "organized power", because the index represents the magnitude of the power that is flowing within the system towards particular ends, as distinct from power that is dissipated|2| naturally. Almost half a century earlier, Alfred J. Lotka (1922) had suggested that a system's capacity to prevail in evolution was related to its ability to capture useful power. Ascendency can thus be regarded as a refinement of Lotka's supposition that also takes into account how power is actually being channeled within a system.
+In mathematical terms, ascendency is the product of the aggregate amount of material or energy being transferred in an ecosystem times the coherency|3| with which the outputs from the members of the system relate to the set of inputs to the same components (Ulanowicz 1986).  Coherence is gauged by the average mutual information shared between inputs and outputs (Rutledge et al. 1976).
+Originally, it was thought that ecosystems|4| increase uniformly in ascendency as they developed, but subsequent empirical observation has suggested that all sustainable ecosystems are confined to a narrow "window of vitality" (Ulanowicz 2002). Systems with relative values of ascendency plotting|5| below the window tend to fall apart due to lack of significant internal constraints, whereas systems above the window tend to be so "brittle" that they become vulnerable to external perturbations.
+Sensitivity analysis on the components of the ascendency reveals the controlling transfers within the system in the sense of Liebig (Ulanowicz and Baird 1999). That is, ascendency can be used to identify which resource is limiting the functioning of each component of the ecosystem.
+It is thought that autocatalytic|6| feedback is the primary route by which systems increase and maintain their ascendencies (Ulanowicz 1997.)
+
+
+== References ==

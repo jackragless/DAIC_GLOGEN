@@ -1,0 +1,19 @@
+===GLOGEN GLOSSARY===
+
+|1| subtracted : (general) simple past tense and past participle of subtract. (transitive, arithmetic) To remove or reduce; especially to reduce a quantity or number
+
+===DOCUMENT BODY===
+
+Information is that which reduces uncertainty, wholly or in part.
+Similarly, anti-information is that which increases uncertainty.
+It is negative information.
+Noise on a noisy communication channel is an example of anti-information.
+According to Shannon's Channel Coding Theorem
+the entropy of the noise must be subtracted|1| to obtain the channel capacity
+that remains available for reliable communication.
+The gambling industry has made a business out of selling anti-information.
+People are willing to pay for anti-information.
+The increase in uncertainty enables them to savor the information that they subsequently receive
+when the uncertainty is finally resolved.
+The term anti-information was introduced by Koos Verhoeff in the 1970s
+while teaching informatics at the Erasmus University Rotterdam.
