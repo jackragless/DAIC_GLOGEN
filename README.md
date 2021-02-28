@@ -1,5 +1,5 @@
 # ---GLOGEN---
-### Domain Specific Keyword Identifier & GLOssary GENerator
+### Domain-specific Keyword Extraction & GLOssary GENeration
 ---------------------------------------------
 ### Features
 ###### Module 1: train keyword extraction model:
