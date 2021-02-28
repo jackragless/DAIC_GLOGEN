@@ -1,20 +1,14 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[3]:
-
+# parse_utils module implements POS tagging and constituency parsing
 
 import nltk
 nltk.download('punkt',quiet=True)
 import benepar
 benepar.download('benepar_en3', quiet=True)
 parser = benepar.Parser("benepar_en3")
-norm_pos_tags = ['CC', 'CD', 'DT', 'EX', 'FW', 'IN', 'JJ', 'JJR', 'JJS', 'LS', 'MD', 'NN', 'NNS', 'NNP', 'NNPS', 'PDT', 'POS', 'PRP', 'PRP$', 'RB', 'RBR', 'RBS', 'RP', 'TO', 'UH', 'VB', 'VBG', 'VBD', 'VBN', 'VBP', 'VBZ', 'WDT', 'WP', 'WRB', ',', '.']
 
 
-# In[17]:
 
-
+# returns raw constituency tree
 def parseSent(sent):
     try:
         const = parser.parse(sent)
@@ -23,9 +17,7 @@ def parseSent(sent):
         return
 
 
-# In[18]:
-
-
+# returns all nodes from tree as array
 def getAllNodes(parent, arr):
     for node in parent:
         if type(node) is nltk.Tree:
@@ -34,15 +26,8 @@ def getAllNodes(parent, arr):
     return arr
 
 
-# In[19]:
 
-
-test = 'Greenfoot is an integrated development environment using Java or Stride designed primarily for educational purposes at the high school and undergraduate level.'
-
-
-# In[36]:
-
-
+# returns phrase (NP or VP) nodes from tree as array
 def getPhraseNodes(parent, arr):
     for node in parent:
         if type(node) is nltk.Tree:
@@ -72,14 +57,12 @@ def getPhraseNodes(parent, arr):
     return arr
 
 
-# In[ ]:
-
-
+# returns all word nodes from tree as array
 def getWordNodes(parent, arr):
     for node in parent:
         if type(node) is nltk.Tree:
             for leaf in node.leaves():
-                if node.label() in norm_pos_tags:
+                if node.label() in ['CC', 'CD', 'DT', 'EX', 'FW', 'IN', 'JJ', 'JJR', 'JJS', 'LS', 'MD', 'NN', 'NNS', 'NNP', 'NNPS', 'PDT', 'POS', 'PRP', 'PRP$', 'RB', 'RBR', 'RBS', 'RP', 'TO', 'UH', 'VB', 'VBG', 'VBD', 'VBN', 'VBP', 'VBZ', 'WDT', 'WP', 'WRB', ',', '.']:
                     arr.append([leaf,node.label()])
             getWordNodes(node, arr)
     return arr

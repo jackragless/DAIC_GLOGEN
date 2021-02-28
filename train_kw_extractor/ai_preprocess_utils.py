@@ -1,5 +1,8 @@
+# ai_preprocess_utils module centralises all text cleaning processes
+
 import nltk
 from nltk.corpus import stopwords
+nltk.download('stopwords', quiet=True)
 stop_words = set(stopwords.words('english'))
 import re
 nltk.download('wordnet', quiet=True)
@@ -20,11 +23,6 @@ def remove_grammar(text_to_clean):
 
 def remove_bracket_content(text_to_clean):
     return re.sub("[\[\(].*?[\]\)]", "", text_to_clean)
-
-
-
-
-test = "The initiative is coordinated by the International Food Policy Research Institute and the University of Minnesota and is supported by a grant to IFPRI by the Bill & Melinda Gates Foundation.Phase I of HarvestChoice ran from October 2006 to June 2010, while Phase II began in December 2010 for a period of 4 years and a total budget of some $8.2M. Purpose of the Initiative Farming entails a great deal of risk and uncertainties. Weather varies, price fluctuates, soil degrades, pest damages, and, even climate changes. Farmers everywhere must cope with these uncertainties. Throughout the history of agriculture, many options, such as fertilizer application, irrigation, improved varieties, and farming machinery have been developed to help manage the risks, increase yields, increase efficiency, and, increasingly, promote sustainability of the overall system.With these techniques and tools in mind, each farmer must assess their local context and analyze the costs and benefits of adopting them, such as the additional labor and/or investment required. "
 
 
 

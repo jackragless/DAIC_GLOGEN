@@ -1,3 +1,5 @@
+# pipeline 5: simpletransformers_bert_training_evaluation trains and evaluates keyword extraction model on bert-base-uncased
+
 import simpletransformers
 import logging
 import pandas as pd
@@ -33,10 +35,9 @@ def bert_train(corpus, train_cutoff):
     transformers_logger = logging.getLogger("transformers")
     transformers_logger.setLevel(logging.WARNING)
     
-
     
     model = NERModel(
-    "bert", "bert-base-cased", labels= ["B", "I", "O"], use_cuda=True, args = model_args
+    "bert", "bert-base-cased", labels= ["B", "I", "O"], use_cuda=True, args = model_args #change model here if desired
     )
     
     model.train_model(train_data)
@@ -67,14 +68,8 @@ def bert_eval(corpus, train_cutoff):
 
 def driver(corpus):
     
-    train_cutoff = int(0.8 * len(corpus))
+    train_cutoff = int(0.8 * len(corpus)) #arbitarily set to 80/20 training/evaluation data split
     
     bert_train(corpus, train_cutoff)
     bert_eval(corpus, train_cutoff)
-
-
-
-# with open('biogen_stopwords_latest_wgrammar.pkl', 'rb') as f:
-#     corpus = pickle.load(f)
-# driver(corpus)
 

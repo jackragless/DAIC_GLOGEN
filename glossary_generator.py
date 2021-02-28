@@ -3,17 +3,9 @@ import pyfiglet
 import os
 import wikipedia
 from tqdm import tqdm
-
-
 from glossary_generator import *
 
-# pages = ['Augmented reality-assisted surgery','Universal Scene Description','Junaio','USens','ARCore','Adjusted mutual information','Algorithmic information theory','Anti-information','Ascendency','Asymptotic equipartition property']
-# for page in pages:
-#     text_file = open("text_files/{}.txt".format(page), "w")
-#     text_file.write(wikipedia.page(page,auto_suggest=False).content)
-#     text_file.close()
-
-
+#converts NLTK POS tags to Wiktionary POS tags
 pos_association = {
     'CC': ['conjunction'],
     'CD': ['numeral'],
@@ -55,8 +47,9 @@ pos_association = {
 }
 
 
-def generate_keywords(processed_text):
 
+# generates constituency tree, predicts keyword/phrases from text, then ensures kephrases are valid compared to constituency parsing
+def generate_keywords(processed_text):
     candidate_phrases = []
     pos = []
     tok_sents = []
@@ -87,13 +80,14 @@ def generate_keywords(processed_text):
 
                             if pred_kw[i][j] == candidate_phrases[m][0] and pred_kw[i][j] not in kw_only:
                                 FINAL_KW.append(
-                                    [candidate_phrases[m][0], pos_association[candidate_phrases[m][1]]])
+                                    [candidate_phrases[m][0], pos_association[candidate_phrases[m][1]]]) #convert NLTK POS ---> Wikt POS
                                 kw_only.append(candidate_phrases[m][0])
                                 break
-
     return FINAL_KW
 
 
+
+# extracts definitions from Wiktionary using wikt_def_predict
 def generate_definitions(title, clean_text, keyword_arr):
     final = []
     count = 0
@@ -109,10 +103,10 @@ def generate_definitions(title, clean_text, keyword_arr):
                     final.append([kw[0], temp_def.replace(
                         'invalid-pos', '').replace('invalid-term', '')])
                     break
-
     return final
 
 
+#appends references '...keyword|1|...' to end of keywords in-text 
 def add_def_refs(orig_text, keywords_only):
     indexes = []
     index_sum = 0
@@ -128,10 +122,10 @@ def add_def_refs(orig_text, keywords_only):
         ref_text = ref_text[:indexes[i]+index_adjust] + \
             '|{}|'.format(i+1) + ref_text[indexes[i]+index_adjust:]
         index_adjust += len(str(i+1)) + 2
-
     return ref_text
 
 
+# prepends glossary to original .txt input to form one string
 def gen_final_doc(corpus_obj):
     final_doc = '===GLOGEN GLOSSARY===\n\n'
 
@@ -143,10 +137,11 @@ def gen_final_doc(corpus_obj):
             temp_sent + '.').replace('..', '') + '\n'
 
     final_doc += '\n===DOCUMENT BODY===\n\n' + corpus_obj['text_w_ref']
-
     return final_doc
 
 
+
+# user interface for providing .txt files
 print(pyfiglet.figlet_format("DAIC GLOGEN"))
 print('DESCRIPTION: GLOGEN automatically generates glossaries and prepends them to given .txt files. \nENSURE: <filename>.txt == original text title.')
 answer = ''
@@ -168,9 +163,9 @@ while True:
     else:
         print('INVALID INPUT --- TRY AGAIN.')
         continue
+
 if txt_address == '':
     txt_address = os.getcwd()
-# txt_address = '/home/jackragless/projects/github/DAIC_GLOGEN/text_files'
 if txt_address[-1] == '/':
     txt_address = txt_address[:-1]
 
@@ -181,6 +176,9 @@ print('\n')
 if os.path.exists(txt_address + '/GLOGEN') == False:
     os.mkdir(txt_address + '/GLOGEN')
 
+
+
+# iterates through all text files in txt_address and applies above functions, then outputs result to GLOGEN folder
 for i, filename in enumerate(os.listdir(txt_address)):
 
     if filename.endswith('.txt'):
@@ -209,3 +207,12 @@ for i, filename in enumerate(os.listdir(txt_address)):
         text_file.write(gen_final_doc(temp_obj))
         text_file.close()
         print('GLOGEN DOC ADDED.\n')
+
+
+
+# pages = ['Augmented reality-assisted surgery','Universal Scene Description','Junaio','USens','ARCore','Adjusted mutual information','Algorithmic information theory','Anti-information','Ascendency','Asymptotic equipartition property']
+# for page in pages:
+#     text_file = open("text_files/{}.txt".format(page), "w")
+#     text_file.write(wikipedia.page(page,auto_suggest=False).content)
+#     text_file.close()
+

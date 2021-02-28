@@ -1,3 +1,15 @@
+#converts text into [sentnum, word, label] objects for simpletransformers training
+#eg The white cat sat on the matt. kw = 'white cat', 'matt'
+# [[1,'The','O'],
+#  [1,'white','B'],
+#  [1,'cat','I'],
+#  [1,'sat','O'],
+#  [1,'on','O'],
+#  [1,'the','O'],
+#  [1,'matt','B'],
+#  [1,'.','O']]
+
+
 from tqdm import tqdm
 import pickle
 import numpy as np
@@ -7,8 +19,8 @@ from nltk.corpus import stopwords
 stop_words = set(stopwords.words('english'))  
 
 
-
-
+# removes spaces separating words in a keyphrase
+# allows for easy BIO parsing
 def para_kw_space_remove(curpage, kw_pool):
     curstring = curpage['text']
     for kw in kw_pool:
@@ -18,8 +30,7 @@ def para_kw_space_remove(curpage, kw_pool):
     return curstring
 
 
-
-
+# returns array of tokenized sents, array of corresponding BIO labels
 def biogen(curpage, kw_pool):
     sents = nltk.sent_tokenize(para_kw_space_remove(curpage, kw_pool))
     final_label_arr = []
@@ -47,7 +58,7 @@ def biogen(curpage, kw_pool):
     return final_sent_arr, final_label_arr
 
 
-
+# sanity check to ensure tok-sentence and label array are same length
 def same_len(sentences, labels):
     filt_s = []
     filt_l = []
@@ -58,10 +69,10 @@ def same_len(sentences, labels):
     return filt_s, filt_l
 
 
-
-
 def driver(corpus):
 
+	# this mechanism pools all keywords from all wiki texts together
+	# ensures AI not confused by input where a keyword is labelled 'B'/'I' in one page and 'O' in another (because author failed to hyperlink)
     kw_pool = []
     for page in corpus:
         kw_pool += page['kw']
@@ -71,10 +82,7 @@ def driver(corpus):
     
     labels = []
     sentences = []
-    count = 0
     for page in tqdm(corpus, desc='CONVERTING CORPUS TO BIO FORMAT'):
-        count += 1
-        #print(int(100*count/len(corpus)),'% <--->',str(count) + '/' + str(len(corpus)), end='\r')
         s, l= biogen(page, kw_pool)
         sentences += s
         labels += l
@@ -86,18 +94,7 @@ def driver(corpus):
     for sent in range(len(sentences)):
         sent_num += 1
         for word in range(len(sentences[sent])):
-            FINAL_OUTPUT.append([sent_num,sentences[sent][word],labels[sent][word]])
+            FINAL_OUTPUT.append([sent_num,sentences[sent][word],labels[sent][word]]) #combines separate sentence and label arrays into one object
             
             
     return FINAL_OUTPUT
-
-
-
-# with open("wiki_corpus_chinked_wgrammar.pkl", 'rb') as f:
-#     corpus = pickle.load(f)
-
-# FINAL_OUTPUT = driver(corpus)
-
-# fileObj = open('biogen.pkl', 'wb')
-# pickle.dump(FINAL_OUTPUT,fileObj)
-

@@ -30,6 +30,8 @@ To use this pretrained model simply extract it to the main folder where `glossar
 ###### Module 1: train keyword extraction model:
 Run `python train_kw_extractor.py`
 Modify model training settings (eg. epoch freq) in `train_kw_extractor/P5_simpletransformers_bert_training_evaluation.py`
+Models from training located in `data/bert-model-files/outputs`
+Evaluation metrics in `data`
 
 ###### Module 2: glossary generator:
 Run `python glossary_generator.py`

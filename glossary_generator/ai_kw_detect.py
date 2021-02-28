@@ -17,7 +17,7 @@ if torch.cuda.is_available() == False:
 
 
 model = NERModel(
-    "bert", '/home/jackragless/projects/data/DAIC_GLOGEN/best_bert_kw_extract_model', labels= ["B", "I", "O"], use_cuda=True
+    "bert", '/home/jackragless/projects/data/DAIC_GLOGEN/best_bert_kw_model', labels= ["B", "I", "O"], use_cuda=True
 )
 
 

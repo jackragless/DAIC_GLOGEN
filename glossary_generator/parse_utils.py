@@ -30,20 +30,30 @@ def getAllNodes(parent, arr):
 def getPhraseNodes(parent, arr):
     for node in parent:
         if type(node) is nltk.Tree:
-            if node.label() == 'NP' and len(node.leaves()) in range(2,4):
+            if node.label() == 'NP' and len(node.leaves()) in range(2,6):
                 temp_cat_str = ''
-                for leaf in node.leaves():
-                    temp_cat_str += ' ' + leaf
-                arr.append([temp_cat_str.strip(),'noun'])
-            if node.label() == 'VP' and len(node.leaves()) in range(2,4):
+                condition = True
+                for child in node:
+                    if child.label() == 'NP' or child.label() == 'VP' or child.label() == 'PP':
+                        condition = False
+                if condition == True:
+                    for leaf in node.leaves():
+                        temp_cat_str += ' ' + leaf
+                    arr.append([temp_cat_str.strip(),'noun'])
+            if node.label() == 'VP' and len(node.leaves()) in range(2,6):
                 temp_cat_str = ''
-                for leaf in node.leaves():
-                    temp_cat_str += ' ' + leaf
-                arr.append([temp_cat_str.strip(),'verb'])
+                condition = True
+                for child in node:
+                    if child.label() == 'NP' or child.label() == 'VP' or child.label() == 'PP':
+                        condition = False
+                if condition == True:
+                    for leaf in node.leaves():
+                        temp_cat_str += ' ' + leaf
+                    arr.append([temp_cat_str.strip(),'verb'])
             
             getPhraseNodes(node, arr)
     return arr
-
+    
 
 # returns all word nodes from tree as array
 def getWordNodes(parent, arr):

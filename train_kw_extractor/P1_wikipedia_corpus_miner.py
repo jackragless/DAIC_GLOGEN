@@ -1,3 +1,6 @@
+# pipeline 1 --- wikipedia_corpus_miner recursively mines all pages titles within a given category to a specified depth
+# data mined for each wiki page title (incl title, text, keywords(links)) and rolled into array of wiki objects
+
 import wikipedia
 import pandas as pd
 import wikipediaapi
@@ -7,6 +10,8 @@ from bs4 import BeautifulSoup as bs
 from tqdm import tqdm
 
 
+# recursively mine pages within category; categories listed within categories 
+# create exponential growth in pages for each depth level
 def mine_page_titles(title, max_depth, depth):
     final = []
     arr = wiki.page(title).categorymembers
@@ -23,6 +28,8 @@ def mine_page_titles(title, max_depth, depth):
     return final
 
 
+# extracts <a href>'s from page HTML containing "/wiki/" 
+# (ie. hyperlinks to other articles; we regard these as keywords)
 def parse_kw(title, curpage):
     try:
         curpage = curpage.html()
@@ -43,7 +50,6 @@ def parse_kw(title, curpage):
 
 
 
-
 def driver(wiki_category_page_title, max_depth):
 
     print('FETCHING WIKI PAGES...')
@@ -54,6 +60,8 @@ def driver(wiki_category_page_title, max_depth):
             wiki_objs.remove(page)
     wiki_objs = list(set(wiki_objs))
 
+
+    # this prompt gives user chance to exit if corpus to be mined too large/small
     print('Wikipedia mining at depth == {} has returned {} unique pages.'.format(max_depth,len(wiki_objs)))
     while True:
         continue_ans = input('Do you wish to proceed mining the data from these pages (yes / no)?\n>>>')
@@ -70,7 +78,6 @@ def driver(wiki_category_page_title, max_depth):
     
     
     FINAL_OUTPUT = []
-    count = 0
     for title in tqdm(wiki_objs, desc = 'MINING PAGE DATA'):
         try:
             curpage = wikipedia.page(title)
@@ -81,14 +88,5 @@ def driver(wiki_category_page_title, max_depth):
             'text' : curpage.content,
             'kw' : parse_kw(title, curpage)
         })
-
-        count += 1
-        
+       
     return FINAL_OUTPUT
-
-
-
-# FINAL_OUTPUT = driver('Category:Artificial intelligence')
-# with open('orig_wiki_corpus.pkl', 'wb') as f:
-#     pickle.dump(FINAL_OUTPUT, f)
-

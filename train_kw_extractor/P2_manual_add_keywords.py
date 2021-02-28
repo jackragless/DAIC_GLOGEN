@@ -1,3 +1,5 @@
+#pipeline 2: manual_add_keywords adds top tf-idf keywords + acronyms + sequences of capitalised words with length greater than 3
+
 from train_kw_extractor import ai_parse_utils
 
 from tqdm import tqdm
@@ -14,6 +16,9 @@ import pandas as pd
 unigram = pd.read_csv('./data/unigram_freq.csv')
 common_unigram = list(unigram[:10000]['word'])
 
+
+
+#tf-idf functionset from https://stevenloria.com/tf-idf/
 def tf(word, blob):
     return blob.words.count(word) / len(blob.words)
 
@@ -25,6 +30,7 @@ def idf(word, bloblist):
 
 def tfidf(word, blob, bloblist):
     return tf(word, blob) * idf(word, bloblist)
+
 
 
 
@@ -60,10 +66,8 @@ def manual_add_kw(wiki_object):
 def driver(corpus):
 
     tb_corpus = []
-    count = 0
     length = len(corpus)
     for page in tqdm(corpus, desc = 'MANUALLY ADDING KEYWORDS'):
-        count += 1
         if page['text'] and page['kw'] and page['title']:
             page['kw'] += manual_add_kw(page)
             temp_doc = ''
@@ -97,10 +101,3 @@ def driver(corpus):
         corpus[i]['kw'] = list(set(corpus[i]['kw']))
             
     return corpus
-
-
-
-# with open('/home/jackragless/projects/data/DAIC_GLOGEN/wiki_orig_mined_dataframe.pkl', 'rb') as f:
-#     corpus = pickle.load(f)[0:100]
-# final = driver(corpus)
-
