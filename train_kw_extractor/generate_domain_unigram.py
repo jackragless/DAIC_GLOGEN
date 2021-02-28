@@ -1,17 +1,8 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 import pickle
 import nltk
 import pandas as pd
-import import_ipynb
-import preprocess_utils_ai
-
-
-# In[ ]:
+from tqdm import tqdm
+from train_kw_extractor import preprocess_utils_ai
 
 
 def driver(corpus):
@@ -28,7 +19,7 @@ def driver(corpus):
     
     all_words = []
     count = 0
-    for obj in clean_text_obj:
+    for obj in tqdm(clean_text_obj, desc='GENERATING UNIGRAM'):
         count += 1
         for sent in nltk.sent_tokenize(obj):
             sent = sent.replace('.','')
@@ -41,9 +32,6 @@ def driver(corpus):
     
     return unigram_df
     
-
-
-# In[36]:
 
 
 # with open('orig_wiki_corpus.pkl', 'rb') as f:

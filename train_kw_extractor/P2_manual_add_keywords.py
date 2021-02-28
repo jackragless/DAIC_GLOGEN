@@ -1,11 +1,6 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[5]:
-
-
 from train_kw_extractor import ai_parse_utils
 
+from tqdm import tqdm
 import pickle
 import numpy as np
 import nltk
@@ -31,8 +26,6 @@ def idf(word, bloblist):
 def tfidf(word, blob, bloblist):
     return tf(word, blob) * idf(word, bloblist)
 
-
-# In[6]:
 
 
 def manual_add_kw(wiki_object):
@@ -62,7 +55,6 @@ def manual_add_kw(wiki_object):
     return kw_to_add
 
 
-# In[7]:
 
 
 def driver(corpus):
@@ -70,9 +62,8 @@ def driver(corpus):
     tb_corpus = []
     count = 0
     length = len(corpus)
-    for page in corpus:
+    for page in tqdm(corpus, desc = 'MANUALLY ADDING KEYWORDS'):
         count += 1
-        print(str(int(100*count/length)) + '%','<--->',count,'/',length,end='\r')
         if page['text'] and page['kw'] and page['title']:
             page['kw'] += manual_add_kw(page)
             temp_doc = ''
@@ -107,8 +98,6 @@ def driver(corpus):
             
     return corpus
 
-
-# In[8]:
 
 
 # with open('/home/jackragless/projects/data/DAIC_GLOGEN/wiki_orig_mined_dataframe.pkl', 'rb') as f:

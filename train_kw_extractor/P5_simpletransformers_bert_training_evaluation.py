@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 import simpletransformers
 import logging
 import pandas as pd
@@ -11,8 +5,6 @@ import pickle
 from simpletransformers.ner import NERModel, NERArgs
 import os
 
-
-# In[2]:
 
 
 model_args = {
@@ -23,13 +15,12 @@ model_args = {
 'save_model_every_epoch' : True,
 'save_eval_checkpoints' : False,
 'save_steps' : -1,
-'output_dir':'bert-model-files/outputs/',
-'cache_dir':'bert-model-files/cache_dir',
-'tensorboard_dir':'bert-model-files/runs'
+'output_dir':'data/bert-model-files/outputs/',
+'cache_dir':'data/bert-model-files/cache_dir',
+'tensorboard_dir':'data/bert-model-files/runs'
 }
 
 
-# In[3]:
 
 
 def bert_train(corpus, train_cutoff):
@@ -51,7 +42,6 @@ def bert_train(corpus, train_cutoff):
     model.train_model(train_data)
 
 
-# In[4]:
 
 
 def bert_eval(corpus, train_cutoff):
@@ -60,7 +50,7 @@ def bert_eval(corpus, train_cutoff):
     corpus[train_cutoff:], columns=["sentence_id", "words", "labels"]
     )
     
-    base_loc = 'bert-model-files/outputs'
+    base_loc = 'data/bert-model-files/outputs'
     
     model_eval_results = []
     for foldername in os.listdir(base_loc):
@@ -70,10 +60,9 @@ def bert_eval(corpus, train_cutoff):
             )
             print(base_loc+'/'+foldername)
             model_eval_results.append([foldername,model.eval_model(eval_data)[0]])
-            pd.DataFrame(model_eval_results).to_csv('bert-model-files/model_evaluation_metrics.csv')
+            pd.DataFrame(model_eval_results).to_csv('data/bert-model-files/model_evaluation_metrics.csv')
 
 
-# In[5]:
 
 
 def driver(corpus):
@@ -83,8 +72,6 @@ def driver(corpus):
     bert_train(corpus, train_cutoff)
     bert_eval(corpus, train_cutoff)
 
-
-# In[6]:
 
 
 # with open('biogen_stopwords_latest_wgrammar.pkl', 'rb') as f:

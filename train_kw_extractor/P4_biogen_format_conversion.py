@@ -1,9 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
+from tqdm import tqdm
 import pickle
 import numpy as np
 import nltk
@@ -12,7 +7,6 @@ from nltk.corpus import stopwords
 stop_words = set(stopwords.words('english'))  
 
 
-# In[3]:
 
 
 def para_kw_space_remove(curpage, kw_pool):
@@ -24,7 +18,6 @@ def para_kw_space_remove(curpage, kw_pool):
     return curstring
 
 
-# In[4]:
 
 
 def biogen(curpage, kw_pool):
@@ -54,8 +47,6 @@ def biogen(curpage, kw_pool):
     return final_sent_arr, final_label_arr
 
 
-# In[5]:
-
 
 def same_len(sentences, labels):
     filt_s = []
@@ -67,7 +58,6 @@ def same_len(sentences, labels):
     return filt_s, filt_l
 
 
-# In[6]:
 
 
 def driver(corpus):
@@ -82,9 +72,9 @@ def driver(corpus):
     labels = []
     sentences = []
     count = 0
-    for page in corpus:
+    for page in tqdm(corpus, desc='CONVERTING CORPUS TO BIO FORMAT'):
         count += 1
-        print(int(100*count/len(corpus)),'% <--->',str(count) + '/' + str(len(corpus)), end='\r')
+        #print(int(100*count/len(corpus)),'% <--->',str(count) + '/' + str(len(corpus)), end='\r')
         s, l= biogen(page, kw_pool)
         sentences += s
         labels += l
@@ -101,8 +91,6 @@ def driver(corpus):
             
     return FINAL_OUTPUT
 
-
-# In[9]:
 
 
 # with open("wiki_corpus_chinked_wgrammar.pkl", 'rb') as f:

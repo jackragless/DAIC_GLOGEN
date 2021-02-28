@@ -1,37 +1,26 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 import wikipedia
 import pandas as pd
 import wikipediaapi
 wiki = wikipediaapi.Wikipedia('en')
 import pickle
 from bs4 import BeautifulSoup as bs
+from tqdm import tqdm
 
 
-# In[2]:
-
-
-def mine_page_titles(title, depth):
+def mine_page_titles(title, max_depth, depth):
     final = []
     arr = wiki.page(title).categorymembers
     arr = list(arr.keys())
-    if depth > 3: #recommended == 3
+    if depth > max_depth: #recommended == 3
         return
     for i in arr:
         if 'Category:' in i:
-            result = mine_page_titles(i, depth + 1)
+            result = mine_page_titles(i, max_depth, depth + 1)
             if result:
                 final += result
         else:
             final.append(i)
     return final
-
-
-# In[3]:
 
 
 def parse_kw(title, curpage):
@@ -53,48 +42,50 @@ def parse_kw(title, curpage):
         return
 
 
-# In[4]:
 
 
-def parse_text(title, curpage):
-    try:
-        page = curpage.content
-        page = page.replace('\n','').replace('  ',' ').replace('==',' ')
-        return page
-    except:
-        return
+def driver(wiki_category_page_title, max_depth):
 
-
-# In[14]:
-
-
-def driver(wiki_catgory_page_title):
-
-    wiki_objs = mine_page_titles(wiki_catgory_page_title,0)
+    print('FETCHING WIKI PAGES...')
+    wiki_objs = mine_page_titles(wiki_category_page_title,max_depth,0)
     
     for page in wiki_objs:
         if page.find(':')!=-1 or page.find('List')!=-1:
             wiki_objs.remove(page)
     wiki_objs = list(set(wiki_objs))
+
+    print('Wikipedia mining at depth == {} has returned {} unique pages.'.format(max_depth,len(wiki_objs)))
+    while True:
+        continue_ans = input('Do you wish to proceed mining the data from these pages (yes / no)?\n>>>')
+        if continue_ans.lower().startswith("y"):
+            break
+
+        elif answer.lower().startswith("n"):
+            print('EXITING')
+            exit()
+        else:
+            print('INVALID INPUT --- TRY AGAIN.')
+            continue
+    
     
     
     FINAL_OUTPUT = []
     count = 0
-    for title in wiki_objs[0:5]: ###to be modified!!!
-        curpage = wikipedia.page(title)
+    for title in tqdm(wiki_objs, desc = 'MINING PAGE DATA'):
+        try:
+            curpage = wikipedia.page(title)
+        except:
+            continue
         FINAL_OUTPUT.append({
             'title' : title,
-            'text' : parse_text(title, curpage),
+            'text' : curpage.content,
             'kw' : parse_kw(title, curpage)
         })
 
         count += 1
-        print(int(count/len(wiki_objs)*100), '% <--->', str(count)+'/'+str(len(wiki_objs)),  end='\r')
         
     return FINAL_OUTPUT
 
-
-# In[15]:
 
 
 # FINAL_OUTPUT = driver('Category:Artificial intelligence')

@@ -1,12 +1,6 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
-
 from train_kw_extractor import preprocess_utils_ai
 
+from tqdm import tqdm
 from bs4 import BeautifulSoup as bs
 import pandas as pd
 import spacy
@@ -19,8 +13,6 @@ name_dataset = NameDataset()
 # unigram = pd.read_csv('/home/jackragless/projects/data/DAIC_GLOGEN/unigram_freq.csv')
 
 
-# In[ ]:
-
 
 def kw_in_text_check(wiki_object):
     final = []
@@ -32,7 +24,6 @@ def kw_in_text_check(wiki_object):
     return wiki_object
 
 
-# In[ ]:
 
 
 def clean_text(wiki_object):
@@ -58,8 +49,6 @@ def clean_text(wiki_object):
     return wiki_object
 
 
-# In[ ]:
-
 
 def consec_cap_detect(word_string):
     for i in range(0,len(word_string)-1):
@@ -68,7 +57,6 @@ def consec_cap_detect(word_string):
     return False
 
 
-# In[ ]:
 
 
 def person_detect(candidate_string):
@@ -84,7 +72,6 @@ def person_detect(candidate_string):
     return False
 
 
-# In[ ]:
 
 
 def common_word_detect(candidate_string, unigram): #could add stopwords
@@ -94,8 +81,6 @@ def common_word_detect(candidate_string, unigram): #could add stopwords
     else:
         return False
 
-
-# In[ ]:
 
 
 def location_name_detect(whole_text):
@@ -107,7 +92,6 @@ def location_name_detect(whole_text):
     return final
 
 
-# In[ ]:
 
 
 def misc_filters(candidate_string):
@@ -117,8 +101,6 @@ def misc_filters(candidate_string):
         return True
     return False
 
-
-# In[ ]:
 
 
 def label_keyword_array(kw_arr, text, unigram):
@@ -145,8 +127,6 @@ def label_keyword_array(kw_arr, text, unigram):
     return temp_dict
 
 
-# In[ ]:
-
 
 def driver(corpus, unigram):
     
@@ -154,19 +134,18 @@ def driver(corpus, unigram):
     #clean text in wiki_objects
     count = 0
     wiki_object = []
-    for i in range(len(corpus)):
+    for i in tqdm(range(len(corpus)), desc='CLEANING'):
         if corpus[i]['text'] is not None and corpus[i]['kw'] is not None and corpus[i]['title'] is not None:
             wiki_object.append(clean_text(corpus[i]))
         count += 1
-        print('CLEANING:', int(100*count/len(corpus)),'% <--->', str(count)+'/'+str(len(corpus)), end='\r')
         
-    
+    print('\n')
+
     #chinking labels applied here
     count = 0
-    for i in wiki_object:
+    for i in tqdm(wiki_object, desc='CHINKING'):
         i['kw'] = label_keyword_array(i['kw'], i['text'],unigram)
         count += 1
-        print('CHINKING:', int(100*count/len(wiki_object)),'% <--->', str(count) + '/' + str(len(wiki_object)), end='\r')
             
     
     #chink labels == 'R' are removed
@@ -181,12 +160,9 @@ def driver(corpus, unigram):
         temp['kw'] = temp_arr
         FINAL_OUTPUT.append(temp)
         count += 1
-#         print(str(count) + '/' + str(len(wiki_object)), end='\r')
         
     return FINAL_OUTPUT
 
-
-# In[ ]:
 
 
 # with open('orig_wiki_corpus.pkl', 'rb') as f:

@@ -5,9 +5,9 @@
 
 
 import nltk
-nltk.download('punkt')
+nltk.download('punkt',quiet=True)
 import benepar
-benepar.download('benepar_en3')
+benepar.download('benepar_en3', quiet=True)
 parser = benepar.Parser("benepar_en3")
 norm_pos_tags = ['CC', 'CD', 'DT', 'EX', 'FW', 'IN', 'JJ', 'JJR', 'JJS', 'LS', 'MD', 'NN', 'NNS', 'NNP', 'NNPS', 'PDT', 'POS', 'PRP', 'PRP$', 'RB', 'RBR', 'RBS', 'RP', 'TO', 'UH', 'VB', 'VBG', 'VBD', 'VBN', 'VBP', 'VBZ', 'WDT', 'WP', 'WRB', ',', '.']
 
