@@ -1,0 +1,89 @@
+===GLOGEN GLOSSARY===
+
+|1| Live migration : Live migration refers to the process of moving a running virtual machine or application between different physical machines without disconnecting the client or application.
+|2| Hypervisor : A firmware or software system that provides a virtual machine and allows it to operate directly on underlying hardware (instead of via emulation), but within specified constraints.
+|3| memory pages : plural of memory page.
+|4| VM : Initialism of virtual memory.
+|5| milliseconds : plural of millisecond. One one-thousandth of a second.
+|6| redirected : simple past tense and past participle of redirect. To send to a new location by substituting an address or pointer.
+|7| seamless : Without interruption; coherent.
+|8| PV : Initialism of process variable.
+|9| VMware : VMware, Inc. is an American publicly traded software company from California.
+
+===DOCUMENT BODY===
+
+Live migration|1| refers to the process of moving a running virtual machine or application between different physical machines without disconnecting the client or application. Memory, storage, and network connectivity of the virtual machine are transferred from the original guest machine to the destination.
+
+
+== VM memory migration ==
+Two techniques for moving the virtual machine's memory state from the source to the destination are pre-copy memory migration and post-copy memory migration.
+
+
+=== Pre-copy memory migration ===
+
+
+==== Warm-up phase ====
+In pre-copy memory migration, the Hypervisor|2| typically copies all the memory pages|3| from source to destination while the VM|4| is still running on the source. If some memory pages change (become 'dirty') during this process, they will be re-copied until the rate of re-copied pages is greater than the page dirtying rate.
+
+
+==== Stop-and-copy phase ====
+After the warm-up phase, the VM will be stopped on the original host, the remaining dirty pages will be copied to the destination, and the VM will be resumed on the destination host. The time between stopping the VM on the original host and resuming it on destination is called "down-time", and ranges from a few milliseconds|5| to seconds according to the size of memory and applications running on the VM. There are some techniques to reduce live migration down-time, such as using probability density function of memory change.
+
+
+=== Post-copy memory migration ===
+Post-copy VM migration is initiated by suspending the VM at the source. With the VM suspended, a minimal subset of the execution state of the VM (CPU state, registers and, optionally, non-pageable memory) is transferred to the target. The VM is then resumed at the target. Concurrently, the source actively pushes the remaining memory pages of the VM to the target - an activity known as pre-paging. At the target, if the VM tries to access a page that has not yet been transferred, it generates a page-fault. These faults, known as network faults, are trapped at the target and redirected|6| to the source, which responds with the faulted page. Too many network faults can degrade performance of applications running inside the VM. Hence pre-paging can dynamically adapt the page transmission order to network faults by actively pushing pages in the vicinity of the last fault. An ideal pre-paging scheme would mask large majority of network faults, although its performance depends upon the memory access pattern of the VM's workload. Post-copy sends each page exactly once over the network. In contrast, pre-copy can transfer the same page multiple times if the page is dirtied repeatedly at the source during migration. On the other hand, pre-copy retains an up-to-date state of the VM at the source during migration, whereas with post-copy, the VM's state is distributed over both source and destination. If the destination fails during migration, pre-copy can recover the VM, whereas post-copy cannot.
+
+
+== Seamless|7| live migration ==
+When down-time of a VM during a live migration is not noticeable by the end user, it is called a seamless live migration. Seamless live migration is dependent on a dynamic interface framework, subjecting the process to delayed sequence encryption protocols.
+
+
+== VM managers with live migration support ==
+Virtuozzo
+Xen since version 2.0, 2004 for PV|8| guests; since version 3.1, May 18, 2007 for HVM guests 
+OpenVZ
+Parallels Cloud Server
+Workload Partitions
+Integrity Virtual Machines
+KVM since February 2007, with different techniques.
+Oracle VM Server for x86
+Oracle VM Server for SPARC
+OVirt
+Red Hat Virtualisation
+POWER Hypervisor (PHYP)
+VMware|9| ESXi
+IBM Live Partition Mobility, since 2007
+Hyper-V Server 2008 R2
+VirtualBox
+Proxmox Virtual Environment
+
+
+== Cloud Platforms with live migration support ==
+Jelastic
+Google Cloud Platform
+CloudEndure
+
+
+== Systems providing software live migration ==
+OpenSSI
+MOSIX
+Single-system image
+
+
+== See also ==
+Virtual machine
+Self-migration
+Comparison of platform virtualization software
+CRIU
+
+
+== References ==
+
+
+== External links ==
+HOWTO Article about Xen migration
+OpenVZ checkpointing and live migration
+Live migration in KVM
+VMware VMotion
+Microsoft: Step by Step Guide for live migration
+Microsoft Whitepaper: Live Migration Overview & Architecture

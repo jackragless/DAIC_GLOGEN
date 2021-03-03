@@ -1,0 +1,1343 @@
+===GLOGEN GLOSSARY===
+
+|1| analogue : Alternative form of analog. something that bears an analogy to something else.
+|2| wavelets : plural of wavelet. A fast-decaying oscillation.
+|3| octave : Any of a number of coherent-noise functions of differing frequency that are added together to form Perlin noise.
+|4| localized : simple past tense and past participle of localize. To make local; to fix in, or assign to, a definite place.
+|5| orthogonal : Of two objects, at right angles; perpendicular to each other.
+|6| non-negative : Of a real number, either positive or zero; not negative; greater than or equal to zero.
+|7| orthogonality : the property of being orthogonal. An orthogonal line.
+|8| analogous : Functionally similar, but arising through convergent evolution rather than being homologous.
+|9| wavelet : A fast-decaying oscillation.
+|10| intermittent : Existing only for certain seasons; that is, being dry for part of the year.
+
+===DOCUMENT BODY===
+
+In the mathematics of signal processing, the harmonic wavelet transform, introduced by David Edward Newland in 1993, is a wavelet-based linear transformation of a given function into a time-frequency representation.  It combines advantages of the short-time Fourier transform and the continuous wavelet transform. It can be expressed in terms of repeated Fourier transforms, and its discrete analogue|1| can be computed efficiently using a fast Fourier transform algorithm.
+
+
+== Harmonic wavelets|2| ==
+The transform uses a family of "harmonic" wavelets indexed by two integers j (the "level" or "order") and k (the "translation"), given by 
+  
+    
+      
+        w
+        (
+        
+          2
+          
+            j
+          
+        
+        t
+        −
+        k
+        )
+        
+      
+    
+    {\displaystyle w(2^{j}t-k)\!}
+  , where
+
+  
+    
+      
+        w
+        (
+        t
+        )
+        =
+        
+          
+            
+              
+                e
+                
+                  i
+                  4
+                  π
+                  t
+                
+              
+              −
+              
+                e
+                
+                  i
+                  2
+                  π
+                  t
+                
+              
+            
+            
+              i
+              2
+              π
+              t
+            
+          
+        
+        .
+      
+    
+    {\displaystyle w(t)={\frac {e^{i4\pi t}-e^{i2\pi t}}{i2\pi t}}.}
+  These functions are orthogonal, and their Fourier transforms are a square window function (constant in a certain octave|3| band and zero elsewhere).  In particular, they satisfy:
+
+  
+    
+      
+        
+          ∫
+          
+            −
+            ∞
+          
+          
+            ∞
+          
+        
+        
+          w
+          
+            ∗
+          
+        
+        (
+        
+          2
+          
+            j
+          
+        
+        t
+        −
+        k
+        )
+        ⋅
+        w
+        (
+        
+          2
+          
+            
+              j
+              ′
+            
+          
+        
+        t
+        −
+        
+          k
+          ′
+        
+        )
+        
+        d
+        t
+        =
+        
+          
+            1
+            
+              2
+              
+                j
+              
+            
+          
+        
+        
+          δ
+          
+            j
+            ,
+            
+              j
+              ′
+            
+          
+        
+        
+          δ
+          
+            k
+            ,
+            
+              k
+              ′
+            
+          
+        
+      
+    
+    {\displaystyle \int _{-\infty }^{\infty }w^{*}(2^{j}t-k)\cdot w(2^{j'}t-k')\,dt={\frac {1}{2^{j}}}\delta _{j,j'}\delta _{k,k'}}
+  
+
+  
+    
+      
+        
+          ∫
+          
+            −
+            ∞
+          
+          
+            ∞
+          
+        
+        w
+        (
+        
+          2
+          
+            j
+          
+        
+        t
+        −
+        k
+        )
+        ⋅
+        w
+        (
+        
+          2
+          
+            
+              j
+              ′
+            
+          
+        
+        t
+        −
+        
+          k
+          ′
+        
+        )
+        
+        d
+        t
+        =
+        0
+      
+    
+    {\displaystyle \int _{-\infty }^{\infty }w(2^{j}t-k)\cdot w(2^{j'}t-k')\,dt=0}
+  where "*" denotes complex conjugation and 
+  
+    
+      
+        δ
+      
+    
+    {\displaystyle \delta }
+   is Kronecker's delta.
+As the order j increases, these wavelets become more localized|4| in Fourier space (frequency) and in higher frequency bands, and conversely become less localized in time (t).  Hence, when they are used as a basis for expanding an arbitrary function, they represent behaviors of the function on different timescales (and at different time offsets for different k).
+However, it is possible to combine all of the negative orders (j < 0) together into a single family of "scaling" functions 
+  
+    
+      
+        φ
+        (
+        t
+        −
+        k
+        )
+      
+    
+    {\displaystyle \varphi (t-k)}
+   where
+
+  
+    
+      
+        φ
+        (
+        t
+        )
+        =
+        
+          
+            
+              
+                e
+                
+                  i
+                  2
+                  π
+                  t
+                
+              
+              −
+              1
+            
+            
+              i
+              2
+              π
+              t
+            
+          
+        
+        .
+      
+    
+    {\displaystyle \varphi (t)={\frac {e^{i2\pi t}-1}{i2\pi t}}.}
+  The function φ is orthogonal|5| to itself for different k and is also orthogonal to the wavelet functions for non-negative|6| j:
+
+  
+    
+      
+        
+          ∫
+          
+            −
+            ∞
+          
+          
+            ∞
+          
+        
+        
+          φ
+          
+            ∗
+          
+        
+        (
+        t
+        −
+        k
+        )
+        ⋅
+        φ
+        (
+        t
+        −
+        
+          k
+          ′
+        
+        )
+        
+        d
+        t
+        =
+        
+          δ
+          
+            k
+            ,
+            
+              k
+              ′
+            
+          
+        
+      
+    
+    {\displaystyle \int _{-\infty }^{\infty }\varphi ^{*}(t-k)\cdot \varphi (t-k')\,dt=\delta _{k,k'}}
+  
+
+  
+    
+      
+        
+          ∫
+          
+            −
+            ∞
+          
+          
+            ∞
+          
+        
+        
+          w
+          
+            ∗
+          
+        
+        (
+        
+          2
+          
+            j
+          
+        
+        t
+        −
+        k
+        )
+        ⋅
+        φ
+        (
+        t
+        −
+        
+          k
+          ′
+        
+        )
+        
+        d
+        t
+        =
+        0
+        
+           for 
+        
+        j
+        ≥
+        0
+      
+    
+    {\displaystyle \int _{-\infty }^{\infty }w^{*}(2^{j}t-k)\cdot \varphi (t-k')\,dt=0{\text{ for }}j\geq 0}
+  
+
+  
+    
+      
+        
+          ∫
+          
+            −
+            ∞
+          
+          
+            ∞
+          
+        
+        φ
+        (
+        t
+        −
+        k
+        )
+        ⋅
+        φ
+        (
+        t
+        −
+        
+          k
+          ′
+        
+        )
+        
+        d
+        t
+        =
+        0
+      
+    
+    {\displaystyle \int _{-\infty }^{\infty }\varphi (t-k)\cdot \varphi (t-k')\,dt=0}
+  
+
+  
+    
+      
+        
+          ∫
+          
+            −
+            ∞
+          
+          
+            ∞
+          
+        
+        w
+        (
+        
+          2
+          
+            j
+          
+        
+        t
+        −
+        k
+        )
+        ⋅
+        φ
+        (
+        t
+        −
+        
+          k
+          ′
+        
+        )
+        
+        d
+        t
+        =
+        0
+        
+           for 
+        
+        j
+        ≥
+        0.
+      
+    
+    {\displaystyle \int _{-\infty }^{\infty }w(2^{j}t-k)\cdot \varphi (t-k')\,dt=0{\text{ for }}j\geq 0.}
+  In the harmonic wavelet transform, therefore, an arbitrary real- or complex-valued function 
+  
+    
+      
+        f
+        (
+        t
+        )
+      
+    
+    {\displaystyle f(t)}
+   (in L2) is expanded in the basis of the harmonic wavelets (for all integers j) and their complex conjugates:
+
+  
+    
+      
+        f
+        (
+        t
+        )
+        =
+        
+          ∑
+          
+            j
+            =
+            −
+            ∞
+          
+          
+            ∞
+          
+        
+        
+          ∑
+          
+            k
+            =
+            −
+            ∞
+          
+          
+            ∞
+          
+        
+        
+          [
+          
+            
+              a
+              
+                j
+                ,
+                k
+              
+            
+            w
+            (
+            
+              2
+              
+                j
+              
+            
+            t
+            −
+            k
+            )
+            +
+            
+              
+                
+                  
+                    a
+                    ~
+                  
+                
+              
+              
+                j
+                ,
+                k
+              
+            
+            
+              w
+              
+                ∗
+              
+            
+            (
+            
+              2
+              
+                j
+              
+            
+            t
+            −
+            k
+            )
+          
+          ]
+        
+        ,
+      
+    
+    {\displaystyle f(t)=\sum _{j=-\infty }^{\infty }\sum _{k=-\infty }^{\infty }\left[a_{j,k}w(2^{j}t-k)+{\tilde {a}}_{j,k}w^{*}(2^{j}t-k)\right],}
+  or alternatively in the basis of the wavelets for non-negative j supplemented by the scaling functions φ:
+
+  
+    
+      
+        f
+        (
+        t
+        )
+        =
+        
+          ∑
+          
+            k
+            =
+            −
+            ∞
+          
+          
+            ∞
+          
+        
+        
+          [
+          
+            
+              a
+              
+                k
+              
+            
+            φ
+            (
+            t
+            −
+            k
+            )
+            +
+            
+              
+                
+                  
+                    a
+                    ~
+                  
+                
+              
+              
+                k
+              
+            
+            
+              φ
+              
+                ∗
+              
+            
+            (
+            t
+            −
+            k
+            )
+          
+          ]
+        
+        +
+        
+          ∑
+          
+            j
+            =
+            0
+          
+          
+            ∞
+          
+        
+        
+          ∑
+          
+            k
+            =
+            −
+            ∞
+          
+          
+            ∞
+          
+        
+        
+          [
+          
+            
+              a
+              
+                j
+                ,
+                k
+              
+            
+            w
+            (
+            
+              2
+              
+                j
+              
+            
+            t
+            −
+            k
+            )
+            +
+            
+              
+                
+                  
+                    a
+                    ~
+                  
+                
+              
+              
+                j
+                ,
+                k
+              
+            
+            
+              w
+              
+                ∗
+              
+            
+            (
+            
+              2
+              
+                j
+              
+            
+            t
+            −
+            k
+            )
+          
+          ]
+        
+        .
+      
+    
+    {\displaystyle f(t)=\sum _{k=-\infty }^{\infty }\left[a_{k}\varphi (t-k)+{\tilde {a}}_{k}\varphi ^{*}(t-k)\right]+\sum _{j=0}^{\infty }\sum _{k=-\infty }^{\infty }\left[a_{j,k}w(2^{j}t-k)+{\tilde {a}}_{j,k}w^{*}(2^{j}t-k)\right].}
+  The expansion coefficients can then, in principle, be computed using the orthogonality|7| relationships:
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  a
+                  
+                    j
+                    ,
+                    k
+                  
+                
+              
+              
+                
+                
+
+                
+                =
+                
+                  2
+                  
+                    j
+                  
+                
+                
+                  ∫
+                  
+                    −
+                    ∞
+                  
+                  
+                    ∞
+                  
+                
+                f
+                (
+                t
+                )
+                ⋅
+                
+                  w
+                  
+                    ∗
+                  
+                
+                (
+                
+                  2
+                  
+                    j
+                  
+                
+                t
+                −
+                k
+                )
+                
+                d
+                t
+              
+            
+            
+              
+                
+                  
+                    
+                      
+                        a
+                        ~
+                      
+                    
+                  
+                  
+                    j
+                    ,
+                    k
+                  
+                
+              
+              
+                
+                
+
+                
+                =
+                
+                  2
+                  
+                    j
+                  
+                
+                
+                  ∫
+                  
+                    −
+                    ∞
+                  
+                  
+                    ∞
+                  
+                
+                f
+                (
+                t
+                )
+                ⋅
+                w
+                (
+                
+                  2
+                  
+                    j
+                  
+                
+                t
+                −
+                k
+                )
+                
+                d
+                t
+              
+            
+            
+              
+                
+                  a
+                  
+                    k
+                  
+                
+              
+              
+                
+                
+
+                
+                =
+                
+                  ∫
+                  
+                    −
+                    ∞
+                  
+                  
+                    ∞
+                  
+                
+                f
+                (
+                t
+                )
+                ⋅
+                
+                  φ
+                  
+                    ∗
+                  
+                
+                (
+                t
+                −
+                k
+                )
+                
+                d
+                t
+              
+            
+            
+              
+                
+                  
+                    
+                      
+                        a
+                        ~
+                      
+                    
+                  
+                  
+                    k
+                  
+                
+              
+              
+                
+                
+
+                
+                =
+                
+                  ∫
+                  
+                    −
+                    ∞
+                  
+                  
+                    ∞
+                  
+                
+                f
+                (
+                t
+                )
+                ⋅
+                φ
+                (
+                t
+                −
+                k
+                )
+                
+                d
+                t
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}a_{j,k}&{}=2^{j}\int _{-\infty }^{\infty }f(t)\cdot w^{*}(2^{j}t-k)\,dt\\{\tilde {a}}_{j,k}&{}=2^{j}\int _{-\infty }^{\infty }f(t)\cdot w(2^{j}t-k)\,dt\\a_{k}&{}=\int _{-\infty }^{\infty }f(t)\cdot \varphi ^{*}(t-k)\,dt\\{\tilde {a}}_{k}&{}=\int _{-\infty }^{\infty }f(t)\cdot \varphi (t-k)\,dt.\end{aligned}}}
+  For a real-valued function f(t), 
+  
+    
+      
+        
+          
+            
+              
+                a
+                ~
+              
+            
+          
+          
+            j
+            ,
+            k
+          
+        
+        =
+        
+          a
+          
+            j
+            ,
+            k
+          
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle {\tilde {a}}_{j,k}=a_{j,k}^{*}}
+   and 
+  
+    
+      
+        
+          
+            
+              
+                a
+                ~
+              
+            
+          
+          
+            k
+          
+        
+        =
+        
+          a
+          
+            k
+          
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle {\tilde {a}}_{k}=a_{k}^{*}}
+   so one can cut the number of independent expansion coefficients in half.
+This expansion has the property, analogous|8| to Parseval's theorem, that:
+
+  
+    
+      
+        
+          
+            
+              
+              
+                
+                
+                  ∑
+                  
+                    j
+                    =
+                    −
+                    ∞
+                  
+                  
+                    ∞
+                  
+                
+                
+                  ∑
+                  
+                    k
+                    =
+                    −
+                    ∞
+                  
+                  
+                    ∞
+                  
+                
+                
+                  2
+                  
+                    −
+                    j
+                  
+                
+                
+                  (
+                  
+                    
+                      |
+                    
+                    
+                      a
+                      
+                        j
+                        ,
+                        k
+                      
+                    
+                    
+                      
+                        |
+                      
+                      
+                        2
+                      
+                    
+                    +
+                    
+                      |
+                    
+                    
+                      
+                        
+                          
+                            a
+                            ~
+                          
+                        
+                      
+                      
+                        j
+                        ,
+                        k
+                      
+                    
+                    
+                      
+                        |
+                      
+                      
+                        2
+                      
+                    
+                  
+                  )
+                
+              
+            
+            
+              
+              
+                
+                
+
+                
+                =
+                
+                  ∑
+                  
+                    k
+                    =
+                    −
+                    ∞
+                  
+                  
+                    ∞
+                  
+                
+                
+                  (
+                  
+                    
+                      |
+                    
+                    
+                      a
+                      
+                        k
+                      
+                    
+                    
+                      
+                        |
+                      
+                      
+                        2
+                      
+                    
+                    +
+                    
+                      |
+                    
+                    
+                      
+                        
+                          
+                            a
+                            ~
+                          
+                        
+                      
+                      
+                        k
+                      
+                    
+                    
+                      
+                        |
+                      
+                      
+                        2
+                      
+                    
+                  
+                  )
+                
+                +
+                
+                  ∑
+                  
+                    j
+                    =
+                    0
+                  
+                  
+                    ∞
+                  
+                
+                
+                  ∑
+                  
+                    k
+                    =
+                    −
+                    ∞
+                  
+                  
+                    ∞
+                  
+                
+                
+                  2
+                  
+                    −
+                    j
+                  
+                
+                
+                  (
+                  
+                    
+                      |
+                    
+                    
+                      a
+                      
+                        j
+                        ,
+                        k
+                      
+                    
+                    
+                      
+                        |
+                      
+                      
+                        2
+                      
+                    
+                    +
+                    
+                      |
+                    
+                    
+                      
+                        
+                          
+                            a
+                            ~
+                          
+                        
+                      
+                      
+                        j
+                        ,
+                        k
+                      
+                    
+                    
+                      
+                        |
+                      
+                      
+                        2
+                      
+                    
+                  
+                  )
+                
+              
+            
+            
+              
+              
+                
+                
+
+                
+                =
+                
+                  ∫
+                  
+                    −
+                    ∞
+                  
+                  
+                    ∞
+                  
+                
+                
+                  |
+                
+                f
+                (
+                x
+                )
+                
+                  
+                    |
+                  
+                  
+                    2
+                  
+                
+                
+                d
+                x
+                .
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}&\sum _{j=-\infty }^{\infty }\sum _{k=-\infty }^{\infty }2^{-j}\left(|a_{j,k}|^{2}+|{\tilde {a}}_{j,k}|^{2}\right)\\&{}=\sum _{k=-\infty }^{\infty }\left(|a_{k}|^{2}+|{\tilde {a}}_{k}|^{2}\right)+\sum _{j=0}^{\infty }\sum _{k=-\infty }^{\infty }2^{-j}\left(|a_{j,k}|^{2}+|{\tilde {a}}_{j,k}|^{2}\right)\\&{}=\int _{-\infty }^{\infty }|f(x)|^{2}\,dx.\end{aligned}}}
+  Rather than computing the expansion coefficients directly from the orthogonality relationships, however, it is possible to do so using a sequence of Fourier transforms.  This is much more efficient in the discrete analogue of this transform (discrete t), where it can exploit fast Fourier transform algorithms.
+
+
+== References ==
+David E. Newland, "Harmonic wavelet|9| analysis," Proceedings of the Royal Society of London, Series A (Mathematical and Physical Sciences), vol. 443, no. 1917, p. 203–225 (8 Oct. 1993).
+Wavelets: the key to intermittent|10| information by B. W. Silverman and J. C. Vassilicos, Oxford University Press, 2000. (ISBN 0-19-850716-X)
+B. Boashash, editor, “Time-Frequency Signal Analysis and Processing – A Comprehensive Reference”, Elsevier Science, Oxford, 2003.

@@ -1,0 +1,44 @@
+===GLOGEN GLOSSARY===
+
+|1| C/C++ : The C and C++ programming languages are closely related but have many significant differences.
+|2| C++ : A multi-paradigm high-level compiled programming language, that is a more advanced form of C.
+|3| discontinued : simple past tense and past participle of discontinue. To interrupt the continuance of; to put an end to, especially as regards commercial productions; to stop producing, making, or supplying something.
+|4| notable : Worthy of note; remarkable; memorable; noted or distinguished.
+|5| evolved : simple past tense and past participle of evolve. To give off (gas, such as oxygen or carbon dioxide during a reaction).
+|6| Manifesto : A public declaration of principles, policies, or intentions, especially that of a political party.
+
+===DOCUMENT BODY===
+
+Overload is a bi-monthly professional computer magazine published by ACCU, that was established in 1993 and is edited by Frances Buontempo. It aims to "publish a high standard of articles about all aspects of software development". All issues of Overload, starting from August 1998, are available online.
+
+
+== History ==
+Overload was started in 1993 as a magazine of the "Turbo C++ SIG". By 1994, it had become a "journal of C++ SIG", with an appropriate change in scope. At that time there were several magazines with similar scope, including C/C++|1| Users Journal, C++|2| Report, and to a lesser extent, Dr. Dobb's Journal. The scope of Overload continued to be broadened and in 2000 the magazine was relabeled from "journal of C++ SIG" to "journal of ACCU". About the same time, a board of "readers" was established, to assist authors with improving their articles.Over time, many competing publications have been discontinued|3| (C++ Report has been discontinued in 2002, C/C++ Users Journal in 2006, Dr Dobbs Journal in 2009), and by 2010 Overload has become the only magazine to cover this area, which has attracted articles of notable|4| writers such as former contributing editor of C/C++ Users Journal Matthew Wilson and creator of C++ Bjarne Stroustrup.Since its establishment, the scope of the magazine has evolved|5| from issues specific to C/C++ into all aspects of software development, with a particular emphasis on Agile software development. In 2005 Overload published a Quality Manifesto|6| by Tom Gilb.
+
+
+== Notable contributors ==
+Bjarne Stroustrup
+Matthew Wilson
+David Abrahams
+Tom Gilb
+David H. Bailey
+Kevlin Henney
+Nicolai Josuttis
+Scott Meyers
+
+
+== Editors ==
+Frances Buontempo (2012–present)
+Ric Parkin (2008–2012)
+Alan Griffiths (2003–2008)
+John Merrels (1998–2003)
+Sean A. Corfield (1995–1997)
+Mike Toms (1993–1994)
+
+
+== References ==
+
+
+== External links ==
+Official website
+Bibliography of Overload articles

@@ -1,0 +1,1178 @@
+In algebraic topology and graph theory, graph homology describes the homology groups of a graph, where the graph is considered as a topological space. It formalizes the idea of the number of "holes" in the graph. It is a special case of a simplicial homology, as a graph is a special case of a simplicial complex. Since a finite graph is a 1-complex (i.e., its 'faces' are the vertices - which are 0-dimensional, and the edges - which are 1-dimensional), the only non-trivial homology groups are the 0-th group and the 1-th group.
+
+
+== The 1st homology group ==
+The general formula for the 1st homology group of a topological space X is:
+  
+    
+      
+        
+          H
+          
+            1
+          
+        
+        (
+        X
+        )
+        :=
+        ker
+        ⁡
+        
+          ∂
+          
+            1
+          
+        
+        
+          
+            /
+          
+        
+        im
+        ⁡
+        
+          ∂
+          
+            2
+          
+        
+      
+    
+    {\displaystyle H_{1}(X):=\operatorname {ker} \partial _{1}{\big /}\operatorname {im} \partial _{2}}
+  The example below explains these symbols and concepts in full detail on a graph.
+
+
+=== Example ===
+Let X be a directed graph with 3 vertices {x,y,z} and 4 edges {a: x→y,  b: y→z, c: z→x, d: z→x}. It has several cycles:
+
+One cycle is represented by the loop a+b+c. Here, the + sign represents the fact that all edges are travelled at the same direction. Since the addition operation is commutative, the + sign represents the fact that the loops a+b+c, c+b+a, c+a+b, etc., all represent the same cycle.
+A second cycle is represented by the loop a+b+d.
+A third cycle is represented by the loop c-d. Here, the - sign represents the fact that the edge d is travelled backwards.If we cut the plane along the loop a+b+d, and then cut at c and "glue" at d, we get a cut along the loop a+b+c. This can be represented by the following relation: (a+b+d) + (c-d) = (a+b+c).  To formally define this relation, we define the following commutative groups:
+C0 is the free abelian group on the set of vertices {x,y,z}. Each element of C0 is called a 0-dimensional chain.
+C1 is the free abelian group on the set of directed edges {a,b,c,d}. Each element of C1 is called a 1-dimensional chain. The three cycles mentioned above are 1-dimensional chains, and indeed the relation (a+b+d) + (c-d) = (a+b+c) holds in the group C1.Most elements of C1 are not cycles, for example a+b, 2a+5b-c, etc. are not cycles. To formally define a cycle, we first define boundaries.  The boundary of an edge is denoted by the 
+  
+    
+      
+        
+          ∂
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \partial _{1}}
+   operator and defined as its target minus its source, so 
+  
+    
+      
+        
+          ∂
+          
+            1
+          
+        
+        (
+        a
+        )
+        =
+        y
+        −
+        x
+        ,
+         
+        
+          ∂
+          
+            1
+          
+        
+        (
+        b
+        )
+        =
+        z
+        −
+        y
+        ,
+         
+        
+          ∂
+          
+            1
+          
+        
+        (
+        c
+        )
+        =
+        
+          ∂
+          
+            1
+          
+        
+        (
+        d
+        )
+        =
+        x
+        −
+        z
+        .
+      
+    
+    {\displaystyle \partial _{1}(a)=y-x,~\partial _{1}(b)=z-y,~\partial _{1}(c)=\partial _{1}(d)=x-z.}
+    So 
+  
+    
+      
+        
+          ∂
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \partial _{1}}
+   is a mapping from C1 to C0. Since a,b,c,d are the generators of C1, this 
+  
+    
+      
+        
+          ∂
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \partial _{1}}
+   naturally extends to a group homomorphism from C1 to C0. In this homomorphism, 
+  
+    
+      
+        ∂
+        (
+        a
+        +
+        b
+        +
+        c
+        )
+        =
+        ∂
+        (
+        a
+        )
+        +
+        ∂
+        (
+        b
+        )
+        +
+        ∂
+        (
+        c
+        )
+        =
+        (
+        y
+        −
+        x
+        )
+        +
+        (
+        z
+        −
+        y
+        )
+        +
+        (
+        x
+        −
+        z
+        )
+        =
+        0
+      
+    
+    {\displaystyle \partial (a+b+c)=\partial (a)+\partial (b)+\partial (c)=(y-x)+(z-y)+(x-z)=0}
+  . Similarly, 
+  
+    
+      
+        
+          ∂
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \partial _{1}}
+   maps any cycle in C1 to the zero element of C0. In other words, the set of cycles in C1 is exactly the null space (the kernel) of 
+  
+    
+      
+        
+          ∂
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \partial _{1}}
+  . In this case, the kernel of 
+  
+    
+      
+        
+          ∂
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \partial _{1}}
+   has two generators: one corresponds to a+b+c and the other to a+b+d (the third cycle, c-d, is a linear combination of the first two). So ker 
+  
+    
+      
+        
+          ∂
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \partial _{1}}
+  is isomorphic to Z2.
+
+In a general topological space, we would define higher-dimensional chains. In particular, C2 would be the free abelian group on the set of 2-dimensional objects. However, in a graph there are no such objects, so C2 is a trivial group. Therefore, the image of the second boundary operator,  
+  
+    
+      
+        
+          ∂
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \partial _{2}}
+  , is trivial too. Therefore:
+  
+    
+      
+        
+          H
+          
+            1
+          
+        
+        (
+        X
+        )
+        =
+        ker
+        ⁡
+        
+          ∂
+          
+            1
+          
+        
+        
+          
+            /
+          
+        
+        im
+        ⁡
+        
+          ∂
+          
+            2
+          
+        
+        ≅
+        
+          
+            Z
+          
+          
+            2
+          
+        
+        
+          /
+        
+        
+          
+            Z
+          
+          
+            0
+          
+        
+        =
+        
+          
+            Z
+          
+          
+            2
+          
+        
+      
+    
+    {\displaystyle H_{1}(X)=\operatorname {ker} \partial _{1}{\big /}\operatorname {im} \partial _{2}\cong \mathbb {Z} ^{2}/\mathbb {Z} ^{0}=\mathbb {Z} ^{2}}
+  This corresponds to the intuitive fact that the graph has two "holes". The exponent is the number of holes.
+
+
+=== General case ===
+The above example can be generalized to an arbitrary connected graph G = (V, E).  Let T be a spanning tree of G. Every edge in E \ T corresponds to a cycle; these are exactly the linearly independent cycles. Therefore, the first homology group H1 of a graph is the free abelian group with |E \ T| generators. This number equals |E|-|V|+1; so:
+  
+    
+      
+        
+          H
+          
+            1
+          
+        
+        (
+        X
+        )
+        ≅
+        
+          
+            Z
+          
+          
+            
+              |
+            
+            E
+            
+              |
+            
+            −
+            
+              |
+            
+            V
+            
+              |
+            
+            +
+            1
+          
+        
+      
+    
+    {\displaystyle H_{1}(X)\cong \mathbb {Z} ^{|E|-|V|+1}}
+  .In a disconnected graph, when C is the set of connected components, a similar computation shows:
+  
+    
+      
+        
+          H
+          
+            1
+          
+        
+        (
+        X
+        )
+        ≅
+        
+          
+            Z
+          
+          
+            
+              |
+            
+            E
+            
+              |
+            
+            −
+            
+              |
+            
+            V
+            
+              |
+            
+            +
+            
+              |
+            
+            C
+            
+              |
+            
+          
+        
+      
+    
+    {\displaystyle H_{1}(X)\cong \mathbb {Z} ^{|E|-|V|+|C|}}
+  .In particular, the first group is trivial iff X is a forest.
+
+
+== The 0-th homology group ==
+The general formula for the 0-th homology group of a topological space X is:
+  
+    
+      
+        
+          H
+          
+            0
+          
+        
+        (
+        X
+        )
+        :=
+        ker
+        ⁡
+        
+          ∂
+          
+            0
+          
+        
+        
+          
+            /
+          
+        
+        im
+        ⁡
+        
+          ∂
+          
+            1
+          
+        
+      
+    
+    {\displaystyle H_{0}(X):=\operatorname {ker} \partial _{0}{\big /}\operatorname {im} \partial _{1}}
+  
+
+
+=== Example ===
+Recall that the group C0 is generated by the set of vertices. Since there are no -1-dimensional elements, the group C−1 is trivial, and so the entire group C0 is a kernel of the corresponding boundary operator: 
+  
+    
+      
+        ker
+        ⁡
+        
+          ∂
+          
+            0
+          
+        
+        =
+        
+          C
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \operatorname {ker} \partial _{0}=C_{0}}
+   = the free abelian group generated by {x,y,z}.The image of 
+  
+    
+      
+        
+          ∂
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \partial _{1}}
+   contains an element for each pair of vertices that are boundaries of an edge, i.e., it is generated by {y-x, z-y, x-z}. To calculate the quotient group, it is convenient to think of all the elements of  
+  
+    
+      
+        im
+        ⁡
+        
+          ∂
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \operatorname {im} \partial _{1}}
+   as "equivalent to zero". This means that x, y and z are equivalent - they are in the same equivalence class of the quotient. In other words, 
+  
+    
+      
+        
+          H
+          
+            0
+          
+        
+        (
+        X
+        )
+      
+    
+    {\displaystyle H_{0}(X)}
+   is generated by a single element (any vertex can generate it). So it is isomorphic to Z.
+
+
+=== General case ===
+The above example can be generalized to any connected graph. Starting from any vertex, it is possible to get to any other vertex by adding to it one or more expressions corresponding to edges (e.g. starting from x, one can get to z by adding y-x and z-y). Since the elements of  
+  
+    
+      
+        im
+        ⁡
+        
+          ∂
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \operatorname {im} \partial _{1}}
+   are all equivalent to zero, it means that all vertices of the graph are in a single equivalence class, and thereore 
+  
+    
+      
+        
+          H
+          
+            0
+          
+        
+        (
+        X
+        )
+      
+    
+    {\displaystyle H_{0}(X)}
+   is isomorphic to Z.
+
+In general, the graph can have several connected components. Let C be the set of components. Then, every connected component is an equivalence class in the quotient group. Therefore:
+  
+    
+      
+        
+          H
+          
+            0
+          
+        
+        (
+        X
+        )
+        ≅
+        
+          
+            Z
+          
+          
+            
+              |
+            
+            C
+            
+              |
+            
+          
+        
+      
+    
+    {\displaystyle H_{0}(X)\cong \mathbb {Z} ^{|C|}}
+  .It can be generated by any |C|-tuple of vertices, one from each component.
+
+
+=== Reduced homology ===
+Often, it is convenient to assume that the 0-th homology of a connected graph is trivial (so that, if the graph contains a single point, then all its homologies are trivial). This leads to the definition of the reduced homology. For a graph, the reduced 0-th homology is:
+  
+    
+      
+        
+          
+            
+              
+                H
+                
+                  0
+                
+              
+              ~
+            
+          
+        
+        (
+        X
+        )
+        ≅
+        
+          
+            Z
+          
+          
+            
+              |
+            
+            C
+            
+              |
+            
+            −
+            1
+          
+        
+      
+    
+    {\displaystyle {\tilde {H_{0}}}(X)\cong \mathbb {Z} ^{|C|-1}}
+  .This "reduction" affects only the 0-th homology; the reduced homologies of higher dimensions are equal to the standard homologies.
+
+
+== Higher dimensional homologies ==
+A graph has only vertices (0-dimensional elements) and edges (1-dimensional elements). We can generalize the graph to an abstract simplicial complex by adding elements of a higher dimension. Then, the concept of graph homology is generalized by the concept of simplicial homology.
+
+
+=== Example ===
+In the above example graph, we can add a two-dimensional "cell" enclosed between the edges c and d; let's call it A and assume that it is oriented clockwise. Define C2 as the free abelian group generated by the set of two-dimensional cells, which in this case is a singleton {A}. Each element of C2 is called a 2-dimensional chain.
+
+Just like the boundary operator from C1 to C0, which we denote by 
+  
+    
+      
+        
+          ∂
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \partial _{1}}
+  , there is a boundary operator from C2 to C1, which we denote by 
+  
+    
+      
+        
+          ∂
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \partial _{2}}
+  . In particular, the boundary of the 2-dimensional cell A are the 1-dimensional edges c and d, where c is in the "correct" orientation and d is in a "reverse" orientation; therefore: 
+  
+    
+      
+        
+          ∂
+          
+            2
+          
+        
+        (
+        A
+        )
+        =
+        c
+        −
+        d
+      
+    
+    {\displaystyle \partial _{2}(A)=c-d}
+  . The sequence of chains and boundary operators can be presented as follows: 
+  
+    
+      
+        
+          C
+          
+            2
+          
+        
+        
+          →
+          
+            
+              ∂
+              
+                2
+              
+            
+          
+        
+        
+          C
+          
+            1
+          
+        
+        
+          →
+          
+            
+              ∂
+              
+                1
+              
+            
+          
+        
+        
+          C
+          
+            0
+          
+        
+      
+    
+    {\displaystyle C_{2}\xrightarrow {\partial _{2}} C_{1}\xrightarrow {\partial _{1}} C_{0}}
+   The addition of the 2-dimensional cell A implies that its boundary, c-d, no longer represents a hole (it is homotopic to a single point). Therefore, the group of "holes" now has a single generator, namely a+b+c (it is homotopic to a+b+d). The first homology group is now defined as the quotient group:
+  
+    
+      
+        
+          H
+          
+            1
+          
+        
+        (
+        X
+        )
+        :=
+        ker
+        ⁡
+        
+          ∂
+          
+            1
+          
+        
+        
+          
+            /
+          
+        
+        im
+        ⁡
+        
+          ∂
+          
+            2
+          
+        
+      
+    
+    {\displaystyle H_{1}(X):=\operatorname {ker} \partial _{1}{\big /}\operatorname {im} \partial _{2}}
+  Here, 
+  
+    
+      
+        ker
+        ⁡
+        
+          ∂
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \operatorname {ker} \partial _{1}}
+   is the group of 1-dimensional cycles, which is isomorphic to Z2, and 
+  
+    
+      
+        im
+        ⁡
+        
+          ∂
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \operatorname {im} \partial _{2}}
+   is the group of 1-dimensional cycles that are boundaries of 2-dimensional cells, which is isomorphic to Z. Hence, their quotient H1 is isomorphic to Z. This corresponds to the fact that X now has a single hole. Previously. the image of 
+  
+    
+      
+        
+          ∂
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \partial _{2}}
+   was the trivial group, so the quotient was equal to 
+  
+    
+      
+        ker
+        ⁡
+        
+          ∂
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \operatorname {ker} \partial _{1}}
+  . Suppose now that we add another oriented 2-dimensional cell B between the edges c and d, such that 
+  
+    
+      
+        
+          ∂
+          
+            2
+          
+        
+        (
+        B
+        )
+        =
+        
+          ∂
+          
+            2
+          
+        
+        (
+        A
+        )
+        =
+        c
+        −
+        d
+      
+    
+    {\displaystyle \partial _{2}(B)=\partial _{2}(A)=c-d}
+  . Now C2 is the free abelian group generated by {A,B}. This does not change H1 - it is still isomorphic to Z (X still has a single 1-dimensional hole). But now C2 contains the two-dimensional cycle A-B, so 
+  
+    
+      
+        
+          ∂
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \partial _{2}}
+   has a non-trivial kernel. This cycle generates the second homology group, corresponding to the fact that there is a single two-dimensional hole: 
+  
+    
+      
+        
+          H
+          
+            2
+          
+        
+        (
+        X
+        )
+        :=
+        ker
+        ⁡
+        
+          ∂
+          
+            2
+          
+        
+        ≅
+        
+          Z
+        
+      
+    
+    {\displaystyle H_{2}(X):=\operatorname {ker} \partial _{2}\cong \mathbb {Z} }
+   We can proceed and add a 3-cell - a solid 3-dimensional object (called C) bounded by A and B. Define C3 as the free abelian group generated by {C}, and the boundary operator 
+  
+    
+      
+        
+          ∂
+          
+            3
+          
+        
+        :
+        
+          C
+          
+            3
+          
+        
+        →
+        
+          C
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \partial _{3}:C_{3}\to C_{2}}
+  . We can orient C such that 
+  
+    
+      
+        
+          ∂
+          
+            3
+          
+        
+        (
+        C
+        )
+        =
+        A
+        −
+        B
+      
+    
+    {\displaystyle \partial _{3}(C)=A-B}
+  ; note that the boundary of C is a cycle in C2. Now the second homology group is:
+  
+    
+      
+        
+          H
+          
+            2
+          
+        
+        (
+        X
+        )
+        :=
+        ker
+        ⁡
+        
+          ∂
+          
+            2
+          
+        
+        
+          
+            /
+          
+        
+        im
+        ⁡
+        
+          ∂
+          
+            3
+          
+        
+        ≅
+        
+          0
+        
+      
+    
+    {\displaystyle H_{2}(X):=\operatorname {ker} \partial _{2}{\big /}\operatorname {im} \partial _{3}\cong {0}}
+  corresponding to the fact that there are no two-dimensional holes (C "fills the hole" between A and B).
+
+
+=== General case ===
+In general, one can define chains of any dimension. If the maximum dimension of a chain is k, then we get the following sequence of groups:
+  
+    
+      
+        
+          C
+          
+            k
+          
+        
+        
+          →
+          
+            
+              ∂
+              
+                k
+              
+            
+          
+        
+        
+          C
+          
+            k
+            −
+            1
+          
+        
+        ⋯
+        
+          C
+          
+            1
+          
+        
+        
+          →
+          
+            
+              ∂
+              
+                1
+              
+            
+          
+        
+        
+          C
+          
+            0
+          
+        
+      
+    
+    {\displaystyle C_{k}\xrightarrow {\partial _{k}} C_{k-1}\cdots C_{1}\xrightarrow {\partial _{1}} C_{0}}
+  It can be proved that any boundary of a (k+1)-dimensional cell is a k-dimensional cycle. In other words, for any k, 
+  
+    
+      
+        im
+        ⁡
+        
+          ∂
+          
+            k
+            +
+            1
+          
+        
+      
+    
+    {\displaystyle \operatorname {im} \partial _{k+1}}
+  (the group of boundaries of k+1 elements) is contained in  
+  
+    
+      
+        ker
+        ⁡
+        
+          ∂
+          
+            k
+          
+        
+      
+    
+    {\displaystyle \operatorname {ker} \partial _{k}}
+   (the group of k-dimensional cycles). Therefore, the quotient 
+  
+    
+      
+        ker
+        ⁡
+        
+          ∂
+          
+            k
+          
+        
+        
+          
+            /
+          
+        
+        im
+        ⁡
+        
+          ∂
+          
+            k
+            +
+            1
+          
+        
+      
+    
+    {\displaystyle \operatorname {ker} \partial _{k}{\big /}\operatorname {im} \partial _{k+1}}
+   is well-defined, and it is defined as the k-th homology group:
+  
+    
+      
+        
+          H
+          
+            k
+          
+        
+        (
+        X
+        )
+        :=
+        ker
+        ⁡
+        
+          ∂
+          
+            k
+          
+        
+        
+          
+            /
+          
+        
+        im
+        ⁡
+        
+          ∂
+          
+            k
+            +
+            1
+          
+        
+      
+    
+    {\displaystyle H_{k}(X):=\operatorname {ker} \partial _{k}{\big /}\operatorname {im} \partial _{k+1}}
+  
+
+
+== References ==

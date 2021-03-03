@@ -71,17 +71,25 @@ def generate_keywords(processed_text):
                     if len(pred_kw[i][j].split()) == 1:
                         for k in range(len(pos[i])):
                             if pred_kw[i][j] == pos[i][k][0] and pred_kw[i][j] not in kw_only:
-                                FINAL_KW.append(
-                                    [pos[i][k][0], pos_association[pos[i][k][1]]])
-                                kw_only.append(pos[i][k][0])
+                                try:
+                                    FINAL_KW.append(
+                                        [pos[i][k][0], pos_association[pos[i][k][1]]])
+                                    kw_only.append(pos[i][k][0])
+                                except:
+                                    pass
+
                                 break
                     else:
                         for m in range(len(candidate_phrases)):
 
                             if pred_kw[i][j] == candidate_phrases[m][0] and pred_kw[i][j] not in kw_only:
-                                FINAL_KW.append(
-                                    [candidate_phrases[m][0], pos_association[candidate_phrases[m][1]]]) #convert NLTK POS ---> Wikt POS
-                                kw_only.append(candidate_phrases[m][0])
+                                try:
+                                    FINAL_KW.append(
+                                        [candidate_phrases[m][0], pos_association[candidate_phrases[m][1]]]) #convert NLTK POS ---> Wikt POS
+                                    kw_only.append(candidate_phrases[m][0])
+                                except:
+                                    pass
+                                    
                                 break
     return FINAL_KW
 

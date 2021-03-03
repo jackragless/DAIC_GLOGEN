@@ -1,0 +1,58 @@
+===GLOGEN GLOSSARY===
+
+|1| sensing : present participle of sense. To comprehend.
+|2| Entrepreneurship : The quality of being an entrepreneur. A person who organizes a risky activity of any kind and acts substantially in the manner of a business entrepreneur.
+|3| leverage : To use; to exploit; to manipulate in order to take full advantage (of something).
+|4| undisclosed : Not disclosed; kept secret.
+|5| MacArthur Fellowship : The MacArthur Fellows Program, also known as the MacArthur Fellowship and commonly but unofficially known as the "Genius Grant", is a prize awarded annually by the John D. and Catherine T. MacArthur Foundation typically to between 20 and 30 individuals, working in any field, who have shown "extraordinary originality and dedication in their creative pursuits and a marked capacity for self-direction" and are citizens or residents of the United States.According to the foundation's website, "the fellowship is not a reward for past accomplishment, but rather an investment in a person's originality, insight, and potential".
+|6| Sloan : A  surname​.
+|7| smartphones : plural of smartphone. A mobile phone with more advanced features and greater computing capacity than a featurephone.
+|8| ACM : Initialism of agency credit memo.
+|9| Wearable : Ellipsis of wearable computer (“small computer which can be worn on the body”)With the advantage of being glanceable, wearables are already making inroads into the smartphone’s territory.
+|10| smartphone : A mobile phone with more advanced features and greater computing capacity than a featurephone.
+|11| ubiquitous computing : A concept of computing as pervasive and ambient, not limited to particular devices or locations.
+|12| CHI : Abbreviation of Chicago. A large city, the county seat of Cook County, in northeastern Illinois, United States, located on Lake Michigan.
+|13| EMI : Initialism of Electromagnetic induction.
+|14| Ubicomp : ubiquitous computing2004, Wolfgang Heidrich, Ravin Balakrishnan, Graphics Interface 2004: proceedings: London, Ontario, 17-19 May 2004 (page 275).
+|15| Classifying : present participle of classify. to declare something a secret, especially a government secret.
+
+===DOCUMENT BODY===
+
+Shwetak Naran Patel is an American computer scientist and entrepreneur best known for his work on developing novel sensing|1| solutions and ubiquitous computing. He is the Washington Research Foundation Entrepreneurship|2| Endowed Professor at the University of Washington in Computer Science & Engineering and Electrical Engineering, where he joined in 2008. His technology start-up company on energy sensing, Zensi, was acquired by Belkin International, Inc. in 2010. He was named a 2011 MacArthur Fellow. He was named the recipient of the 2018 ACM Prize in Computing for contributions to creative and practical sensing systems for sustainability and health.
+
+
+== Biography ==
+
+
+=== Personal life ===
+Shwetak Patel was born on December 9, 1981 in Selma, Alabama, though he was raised in Birmingham, Alabama. He attended Jefferson County International Baccalaureate School for high school in Birmingham, graduating in 2000. He received his B.S. in Computer Science from the Georgia Institute of Technology in 2003, and then continued on to receive his Ph.D. in computer science in 2008 under the advisement of Dr. Gregory Abowd. He started as an assistant professor at the University of Washington in 2008, where he remains today. In July 2013, he was promoted to associate professor, and then in July 2014 was named the Washington Research Foundation Endowed Professor.
+Patel is married to Dr. Julie Kientz, who is also a faculty member at the University of Washington, and lives in Seattle, Washington.
+
+
+=== Professional career ===
+Patel’s research is broadly in the areas of ubiquitous computing, human-computer interaction, and user interface software and technology. He has published over 50 articles since 2003 and has received numerous best paper awards. Patel focuses on developing easy-to-deploy sensing technologies, activity recognition, and applications for energy monitoring. He also has developed novel interaction techniques for mobile devices, mobile sensing systems, and wireless sensor platforms, many of which in collaboration with Microsoft Research, where is also a visiting researcher. Dr. Patel's primary research has been in building low-cost and easy-to-deploy sensing systems, which he calls Infrastructure Mediated Sensing. These approaches leverage|3| utility infrastructures in a home to support whole-house sensing.
+Patel co-founded a company called Zensi, Inc., while he was a graduate student at Georgia Tech. Zensi was a demand-side energy monitoring solutions provider. In 2010, Zensi was acquired by Belkin, Inc in 2010 for an undisclosed|4| sum. This acquisition resulted in numerous awards for Patel, including making the cover of Seattle Business magazine, newsmaker of the year by TechFlash, and was named one of the top 10 start up stories of 2010 by TechFlash.Dr. Patel has also received international recognition for his work, including the MacArthur Fellowship|5| in 2011, the MIT Technology Review TR-35 award in 2009, the Microsoft Research Faculty Fellowship in 2011, the 2011 India Abroad Face of the Future award, and the Sloan|6| Fellowship in 2012. His work was featured in the cover story of Wired Magazine, and his past work on camera blocking technology was also honored by the New York Times as a top technology of the year in 2005. He also has numerous other articles appearing in the popular media on his inventions.
+In 2017 he became a Fellow of the Association for Computing Machinery.
+
+
+== Selected bibliography ==
+Mariakakis, A., Baudin, J., Whitmire, E., Mehta, V., Banks, M.A., Law, A., Mcgrath, L. and Patel, S.N., 2017. PupilScreen: using smartphones|7| to assess traumatic brain injury. Proceedings of the ACM|8| on Interactive, Mobile, Wearable|9| and Ubiquitous Technologies, 1(3), pp.1-27.
+Wang, E.J., Li, W., Hawkins, D., Gernsheimer, T., Norby-Slycord, C. and Patel, S.N., 2016, September. HemaApp: noninvasive blood screening of hemoglobin using smartphone|10| cameras. In Proceedings of the 2016 ACM International Joint Conference on Pervasive and Ubiquitous Computing|11| (pp. 593-604).
+De Greef, L., Goel, M., Seo, M.J., Larson, E.C., Stout, J.W., Taylor, J.A. and Patel, S.N., 2014, September. Bilicam: using mobile phones to monitor newborn jaundice. In Proceedings of the 2014 ACM International Joint Conference on Pervasive and Ubiquitous Computing (pp. 331-342).
+Larson, E.C., Goel, M., Boriello, G., Heltshe, S., Rosenfeld, M. and Patel, S.N., 2012, September. SpiroSmart: using a microphone to measure lung function on a mobile phone. In Proceedings of the 2012 ACM conference on ubiquitous computing (pp. 280-289).
+Cohn, G., Morris, D., Patel, S.N., Tan, D.S. Your Noise is My Command: Sensing Gestures Using the Body as an Antenna. CHI|12| 2011. ACM Conference on Human Factors in Computing Systems (CHI 2011).
+Gupta, S., Reynolds, M.S., Patel, S.N. ElectriSense: Single-Point Sensing Using EMI|13| for Electrical Event Detection and Classification in the Home. Ubicomp|14| 2010.
+Froehlich, J. Larson, E., Campbell, T., Haggerty, C., Fogarty, J., and Patel, S.N. HydroSense: Infrastructure-Mediated Single-Point Sensing of Whole-Home Water Activity. UbiComp 2009.
+Cohn, G., Stuntebeck, E., Pandey, J., Otis., B., Abowd, G.D., Patel, S.N. SNUPI: Sensor Nodes Utilizing Powerline Infrastructure.  Ubicomp 2010.
+Patel, S.N, Gupta, S., Reynolds, M. The Design and Evaluation of an End-User-Deployable, Whole House, Contactless Power Consumption Sensor. ACM Conference on Human Factors in Computing Systems (CHI 2010).
+Patel, S.N., Robertson, T., Kientz, J.A., Reynolds, M.S., Abowd, G.D. At the Flick of a Switch: Detecting and Classifying|15| Unique Electrical Events on the Residential Power Line.  Ubicomp 2007.
+
+
+== References ==
+
+
+== External links ==
+Patel's personal home page
+University of Washington Ubicomp Computing Research Group
+University of Washington Computer Science & Engineering
+University of Washington Electrical Engineering

@@ -1,0 +1,85 @@
+===GLOGEN GLOSSARY===
+
+|1| MIDI : A computerized music file in the MIDI format.
+|2| Max/MSP : Max, also known as Max/MSP/Jitter, is a visual programming language for music and multimedia developed and maintained by San Francisco-based software company Cycling '74.
+|3| STEIM : STEIM (STudio for Electro Instrumental Music) is a center for research and development of new musical instruments in the electronic performing arts, located in Amsterdam, Netherlands.
+|4| NATO : Acronym of North Atlantic Treaty Organization.
+|5| realtime : Alternative form of real-time.
+|6| HC : Initialism of hydrocarbonate.
+|7| improvisation : That which is improvised; an impromptu.
+|8| DVD : digital video disc or digital versatile disc; an optical disc on which video media is recorded in digital format, such as commercially-released movies and other video programs.
+|9| Austrian : Of, from, or pertaining to Austria or its people.
+|10| Soler : A  surname​.
+|11| autonomously : In an autonomous or self-governing manner.
+|12| transforms : Third-person singular simple present indicative form of transform. To undergo a transformation; to change in appearance or character.
+|13| Builders Association : Marianne Weems is the artistic director of the New York-based Obie Award-winning performance and media company, The Builders Association, founded in 1994.
+|14| keyed : simple past tense and past participle of key. To operate (the transmitter switch of a two-way radio).
+|15| audiovisual : Containing both aural and visual elements.
+|16| Bergen : A town and village in New York.
+|17| Rotterdam : A city in South Holland, Netherlands.
+|18| New York : A state of the United States.
+|19| Leipzig : A city in Saxony, Germany.
+|20| Stralsund : Stralsund (German pronunciation: [ˈʃtʁaːlzʊnt]; Swedish: Strålsund), officially the Hanseatic City of Stralsund (German: Hansestadt Stralsund), is a city in the Pomeranian part of Mecklenburg-Vorpommern, Germany.
+|21| ISBN : Initialism of International Standard Book Number.
+|22| VR : Initialism of virtual reality.
+
+===DOCUMENT BODY===
+
+NATO.0+55+3d was an application software for realtime video and graphics, released by 0f0003 Maschinenkunst and the Netochka Nezvanova collective in 1999 for the classic Mac OS operating system.
+Being one of the earliest applications to allow realtime video manipulation and display, it was used by artists for a large variety of purposes, prominently for live performance, VJing and interactive installation.
+
+
+== Design ==
+Running in the framework of Max (a visual programming interface for rapid prototyping and developing of audio software), NATO.0+55+3d extended Max by allowing to access and manipulate all the media types that QuickTime supports (films, images, 3D models, QuickTime VR, etc.). The functionalities included image generation, image processing, control over MIDI|1| and numerical data, integration with Internet, 3D, text and sound.
+
+
+== History ==
+At the time of its release (the summer of 1999), NATO.0+55+3d was in demand as it appeared several years before other similar infrastructures such as GEM and Jitter (released by the makers of Max/MSP|2| in October 2002). Earlier software such as Image/ine developed in 1997 at STEIM|3| was drawing in a similar direction, but the fact that NATO.0+55+3d was operating inside the Max/MSP framework, using its "visual programming" protocol, provided at the same time greater ease of use and more flexibility, allowing the user to create his own applications and tools. It gained popularity among video artists and performers, who were using it for a large variety of purposes, prominently for live performance and interactive installation.
+The last version of NATO.0+55+3d modular was released in November 2000, while additional NATO|4| objects were developed until June 2001.
+
+
+=== Version history ===
+
+
+== Applications ==
+Artists used the software to "manipulate video for live performance and installations" (Mieszkowski 2002). The flexibility of the interface provided artists with "a uniquely suitable environment for the creation of new synesthesiac applications and experiences" (Meta 2001) and "opened up tremendous possibillities for working with realtime|5| video" (Gilje 2005).
+As NATO was distributed with a software development kit, several artists and programmers created third party extensions (e.g. the PeRColate and Auvi object libraries), or developed entire applications based on NATO.
+
+
+=== NATO.0+55 pilots ===
+Some of the most prominent users of NATO.0+55:
+
+242.pilots  (Kurt Ralske, HC|6| Gilje, Lukasz Lysakowski) –  live video improvisation|7| ensemble, winners of the Transmediale award 2003 in the category "Image" for their video performance DVD|8| Live In Bruxelles, released on the Carpark imprint in November 2002. [1]
+Farmers Manual  –  the Austrian|9| collective was among the first artists to integrate NATO visuals into their performances. Their twelve-hour performance "Help Us Stay Alive", which was presented and awarded at FCMM festival in Montreal, October 1999, was using the NATO software. The group held a max/nato/pd workshop at Avanto festival in 2001.
+fiftyfifty.org  –  media art collective based in Barcelona. Its members Pedro Soler|10| and Mia Makela (aka SOLU) were very active promoters of NATO, organizing numerous workshops and using the software in live performance. [2][3]
+Johnny Dekam  –  founder of VIDVOX. Used NATO to create 'Revision History', an artistic software that autonomously|11| downloads and transforms|12| images from the Library of Congress' Database. [4] His commercial VJing software VDMX (released in 2001) was originally based on NATO.0+55. [5]
+The Builders Association|13|  –  American multimedia theater company. Used NATO for their piece Xtravaganza, performed in 2000 at the Whitney Museum of American Art and the New York Guggenheim Museum. During the piece, "live actors [were] keyed|14| into old movie footage". [6]
+portable[k]ommunity  –  Japanese audiovisual|15| duo (Jun Horikiri and Taeji Sawai). Made extensive use of NATO.0+55 in their video installations and live shows, at locations including ISEA, sónar and ICC Tokyo. Gave a NATO workshop at Kyushu Institute of Design in 2001. [7]
+N3krozoft Ltd  –  This multimedia art collective was using NATO.0+55 in live performances and video installations up to 2004.
+Fork Unstable Media  –  German design team. Did an installation using NATO at Sónar 2000 (Barcelona Museum of Modern Art). Created shprootC3ll, a freeware videomixer built with NATO, in 1999. [8]
+John Dekron  –  developed the first version of his commercial VJing software ES_5 (now ES_X) with NATO. [9]
+Meta  –  produced numerous videos and internet applications built with NATO. [10]
+Rene Beekman – used NATO.0+55 in a number of collaborative performance projects, including Route (premiered December 2000 at the opening night of the Amsterdam World Wide Video Festival) with Bruce Gremo, and with Xavier van Wersch at Dot Nu (September 2001, Amsterdam and Rotterdam, The Netherlands) and at the International Media Art Festival, Kiev, Ukraine (2002).
+
+
+=== Workshops ===
+Significant workshops centered on the use of NATO.0+55+3d were held 2000-2002 at many locations including: Bergen|16| (BEK, August 2000), Paris (IRCAM, October 2000), Rotterdam|17| (DEAF_00 festival, November 2000), Sheffield (Lovebytes festival, March 2001), New York|18| (Harvestworks, April 2001), Leipzig|19| (HGB, Mai 2001), Amsterdam (STEIM, Mai and December 2001, April 2002), Barcelona (Hangar, June 2001), Stralsund|20| (Garage, August 2001), Paris (Betaville, August 2001), Helsinki (Avanto, November 2001), Fukuoka/Japan (Kyushu Institute of Design, November 2001), Stuttgart (XML, January 2002), Paris (Villette Numérique, September 2002), Berlin (Underscan, September 2002), Newcastle/Australia (Electrofringe, October 2002).
+
+
+== References ==
+
+
+== Bibliography ==
+Daniels, Dieter. "Sound & Vision in Avantgarde & Mainstream". Medienkunstnetz.de. Retrieved 2008-01-08.
+Gilje, HC (2005). "Within the space of an instant".  In Søndegaard, Morten (ed.). Get Real: Real-Time + Art + Theory + Practice + History. New York: George Braziller. ISBN|21| |22|0807615641. Retrieved 2011-09-12.
+Langlois-Mallet, David (September 20, 2001). "L'Otan, véritable logiciel de la pensée". Politis. Paris. Retrieved 2007-08-24.
+Levin, Golan; Lia; Meta; Ward, Adrian (2001). Generative design: beyond Photoshop - Life & Oblivion. 4x4. Birmingham, UK: Friends of ED. ISBN 1-903450-47-0.
+Mieszkowski, Katharine (1 March 2002). "The most feared woman on the Internet". Salon.com. Retrieved 12 September 2011.
+Nezvanova, Netochka (1999). "NATO.0+55: An Internet, Audio, Video, VR, 2-D, and 3-D Graphics Environment for the IRCAM/Opcode Max Programming Language". 0f0003 Arkiv 247:1-8.
+
+
+== External links ==
+[11] - author's web site.
+[12] - first public announcement of NATO.0+55 on the PD-ot mailing-list, June 21, 1999.
+[13] - archive of IRCAM's NATO distribution page, Mai 2001.
+Video of a NATO.0+55 workshop held at the end of 2000 - workshop leader: Johnny Dekam.

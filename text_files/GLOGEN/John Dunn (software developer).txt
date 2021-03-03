@@ -1,0 +1,36 @@
+===GLOGEN GLOSSARY===
+
+|1| MFA : Initialism of Master of Fine Arts.
+|2| Sheridan : Any of many place names, including:
+A city, the county seat of Grant County, Arkansas, United StatesA city, the county seat of Sheridan County, Wyoming, United StatesA census-designated place in Placer County, California, United States.
+|3| algorithmic : Of, relating to, or being an algorithm. A collection of ordered steps that solve a mathematical problem.
+|4| Atari : An Atari video game system or computer, such as the Atari 2600 or Atari ST
+1988, Jerry Bledsoe, Bitter Blood: A True Story of Southern Family Pride, Madness, and Multiple Murder, Dutton, →ISBN, p 204 [1]Asked what they liked best about visiting their father, both named playing his Atari game.
+|5| gameplay : The totality of player experiences during a game, such as the gaming environment and the competitive interaction with other players; often with reference to a video game. A playful or competitive activity.
+|6| Guinness World Records : Guinness World Records, known from its inception in 1955 until 1999 as The Guinness Book of Records and in previous United States editions as The Guinness Book of World Records, is a reference book published annually, listing world records both of human achievements and the extremes of the natural world.
+|7| superhero : Any kind of fantasy/science fiction crime-fighting character, often with supernatural powers or equipment, in popular children's and fantasy literature.
+|8| Superman : A flavor of ice cream that is a mixture of blue moon ice cream, and other ice cream flavors that are colored red and yellow.
+|9| renamed : simple past tense and past participle of rename. To give a new name to.
+|10| PC : Initialism of patrol craft.
+|11| collaborated : simple past tense and past participle of collaborate. To work together with others to achieve a common goal.
+|12| DNA : The fundamental values or vision of an organization.
+
+===DOCUMENT BODY===
+
+John Francis Dunn (June 6, 1943 - June 27, 2018) was an American music and art software developer. He created several visual art, music, and design software programs, including Lumena, MusicBox, SoftStep, and others. He has also written and performed a variety of electronic music compositions throughout his career. He was a graduate of Sonia Landy Sheridan's Generative Systems program at the School of the Art Institute of Chicago. He also founded Time Arts, Inc. and Algorithmic Arts.
+
+
+== Education ==
+Dunn attended the University of Florida. In 1977, he received an MFA|1| from the School of the Art Institute of Chicago (SAIC) after completing Sonia Landy Sheridan's Generative Systems program. While at the program, Dunn served as a graduate teaching assistant. He also helped Sheridan|2| with work on an early computer graphic system and assembled the program's first image-making computer using algorithmic|3| software he designed. Also while at SAIC, he began working on a paint software program prototype that later would be expanded into SlideMaster, then EASEL and Lumena.
+
+
+== Career ==
+After graduating, Dunn took a job at Atari|4| where he worked as one of the company's first game developers. In 1978, he programmed the Atari 2600 Superman video game, a tie-in game to the 1978 film of the same name. Dunn designed the gameplay|5| and graphics and wrote both the story and the game manual. In 2017, Guinness World Records|6| identified it as the first superhero|7| video game and the first video game/movie tie-in. Superman|8| was also recognized as the longest-running video game character.His work on Superman drew interest from Cromemco. In 1980, Dunn developed Cromemco's SlideMaster software which was considered the first professional paint program for a microcomputer. SlideMaster used the company's Super Dazzler graphics board. Dunn also continued developing a graphics arts program of his own called "EASEL." The software was initially designed for S-100 PCs like the Cromemco, and was later ported to the IBM PC. In 1982, he founded Time Arts, Inc. in Glen Ellen, California to further develop the EASEL software. The software was eventually renamed|9| "Lumena." Updated versions of the Lumena software continued to be made throughout the 1980s. It is considered one of the most important pieces of software in terms of improving graphics capabilities. Dunn left his position at Time Arts Inc. and moved to Hawaii in the late 1980s.In 1986, Dunn created the electronic music software, MusicBox. He released it as "freeware" in the public domain. At the time, it was the only electronic music software of its kind to be available on PC|10| platforms. In the 1990s, Dunn founded Algorithmic Arts, an online company that primarily produces electronic music software. He released a variety of software programs in the 1990s and early 2000s, including the Kinetic Music Machine, SoftStep, BankStep, and ArtWonk, all of which incorporated details of visual art and design. SoftStep was a Windows-based MIDI step sequencer and "algorithmic-composing program." ArtWonk, another algorithmic composition program, implemented algorithmic visual art, the use of mathematical functions, and DNA and protein sequencing with contributions from expert users.
+In 1997 he has collaborated|11| to netOper@, the first Italian interactive work for the web, by the composer Sergio Maltagliati.The Kinetic Music Machine, SoftStep, and BankStep were three of Dunn's programs that could make musical renderings of DNA. Dunn's wife, biologist Mary Anne Clark, helped in the creation of these programs. Dunn and Clark used both DNA|12| and amino acid protein sequences to produce renderings. They wrote an article on the subject of "sonifying" protein sequences ("Life Music: The Sonification of Proteins") that appeared in the February 1999 edition of the journal, Leonardo. The two later rendered music from the DNA of vampire bats, sea urchins, slime molds, and the human sex hormone.
+
+
+== References ==
+
+
+== External links ==
+algoart.com

@@ -1,0 +1,94 @@
+===GLOGEN GLOSSARY===
+
+|1| web application framework : A web framework (WF) or web application framework (WAF) is a software framework that is designed to support the development of web applications including web services, web resources, and web APIs.
+|2| ProcessWire : ProcessWire is a free and open source content management system (CMS), content management framework (CMF) and web application framework (WAF) written in the PHP programming language.
+|3| API : Initialism of application programming interface.
+|4| jQuery : A JavaScript library with predefined functions which simplify many common tasks done with JavaScript and enable them to function regardless of the web browser on which they are executed, using CSS selectors to query HTML elements on a web page and manipulate them.
+|5| web-based : A web application (or web app) is application software that runs on a web server, unlike computer-based software programs that are run locally on the operating system (OS) of the device.
+|6| command-line : A command-line interface (CLI) processes commands to a computer program in the form of lines of text.
+|7| uploads : plural of upload. Such a file transfer.
+|8| agnostic : Of a software component etc: unaware or noncommittal regarding the specific nature of the components or input with which it interacts.
+|9| development tool : A programming tool or software development tool is a computer program that software developers use to create, debug, maintain, or otherwise support other programs and applications.
+|10| CMS : content management system
+|11| end-user : In product development, an end user (sometimes end-user) is a person who ultimately uses or is intended to ultimately use a product.
+|12| Ukrainian : A person of Ukrainian ethnicity or a citizen of Ukraine. .
+|13| Smashing : Gerund: The action of the verb to smash. Something very successful or popular (as music, food, fashion, etc); a hit.
+|14| PHP : Initialism of pseudohypoparathyroidism.
+|15| bucket : A field goal.
+|16| URL : Initialism of Uniform Resource Locator: the address of a web page, ftp site, audio stream or other Internet resource.
+|17| reflective : Involving reflection. The process or mechanism of determining the capabilities of an object at run-time.
+|18| notable : Easily noted (without connotations of value); clearly noticeable, conspicuous.
+|19| dynamically : Of a dynamic nature; variable or constantly changing nature.
+|20| parsing : The act or process in which an agent (person or computer) parses something (a text, a program).
+|21| chunks : plural of chunk. A sequence of two or more words that occur in language with high frequency but are not idiomatic; a bundle or cluster.
+|22| AMP : Initialism of Accelerated Mobile Pages.
+
+===DOCUMENT BODY===
+
+ProcessWire is a free and open source content management system (CMS), content management framework (CMF) and web application framework|1| (WAF) written in the PHP programming language. It is distributed under the Mozilla Public License 2.0. ProcessWire|2| is built around an API|3| with usage and naming conventions similar to the JavaScript framework jQuery. The stated goal behind the API is to provide the level of accessibility and control to pages in a website that jQuery|4| provides to the DOM. Content is managed either via the API or the web-based|5| admin control panel. ProcessWire is largely used for development of web sites, web applications, services, content feeds and related applications.
+
+
+== Features ==
+jQuery-styled API with comprehensive documentation
+Graphical web-based installer
+All fields are custom fields, indexed for find operations in the API
+Can be bootstrapped from other PHP applications or command-line|6| scripts
+Interactive and API-based image manipulation functions
+Drag-and-drop tree-based page list
+Drag-and-drop file and image uploads|7| and editing functions
+Support for larger scale (100k+ page) installations
+Use of string-based selectors for API calls
+Role-based access control system
+Core development emphasis on security
+Markup agnostic|8| output, leaving all output to the developer
+Template files are PHP-based, with no template engine used by default
+Output caching of entire pages or individual parts
+Multi-language support with multi-language text fields and URLs
+Modular plugin architecture and available 3rd party modules
+Field and input types are themselves plugin modules
+Hook system enabling most core functions to be hooked and altered
+Fields and groups of fields are repeatable using built-in Repeater field types
+Support for rich text editing using CKEditor
+
+
+== Audience ==
+Before and during development of a website or application, the audience for ProcessWire consists largely of web developers and web designers. Within this audience, ProcessWire is used as both a development tool|9| and a CMS.
+Post-development the audience changes to individuals that manage content for web sites and applications, who typically are not web designer/developers. This audience uses ProcessWire primarily as a CMS|10| to manage content.
+
+
+== History ==
+ProcessWire has been in active development since 2003. From 2003 to 2007 it was developed under the name Dictator CMS. From 2007–2010 it was developed as ProcessWire 1.x. ProcessWire became an open source community project in 2010 and it is currently developed as ProcessWire 2.x and 3.x.ProcessWire has had 8 significant version releases, and more than 100 minor version releases since the first open source release. Version 3.0 released in September 2016 is the second major version release.
+
+
+== Translations and community ==
+ProcessWire has active, global end-user|11| and developer communities. These communities have translated ProcessWire from English into their native languages, including: Chinese, Croatian, Czech, Dutch, French, German, Greek, Hebrew, Hungarian, Italian, Japanese, Portuguese, Russian, Slovak, Spanish, Swedish, Turkish, Ukrainian|12| and Vietnamese. The central hub of the ProcessWire communities are found in the developer support forums.
+
+
+== Awards and publications ==
+In November 2016 ProcessWire was awarded as CMS Critic's Best Small Business CMS.In July 2016 Smashing|13| Magazine published A Beginners Guide to ProcessWire.Since January 2016 Envato Tuts+ has published several articles and tutorials on ProcessWire.In January 2015 ProcessWire was awarded as CMS Critic's Best Free PHP|14| CMS.In December 2014 PHP Architect published ProcessWire: Flexibility, Power, and a Generous Dose of Pure Fun.In December 2012 ProcessWire was awarded as CMS Critic's Best Free CMS.
+
+
+== Architecture ==
+ProcessWire is built around a page content tree (as opposed to a bucket|15| system). The URL|16| or path of each page is always reflective|17| of its place in the hierarchy. One uses this same path to reference the page in the API. As a result, this connection of the path to the internal tree hierarchy defines the architecture of ProcessWire. Beyond the parent-child relationship implied by a content tree, ProcessWire supports relational one-to-one and one-to-many references between pages in the tree.
+
+
+=== Template architecture ===
+Templates in ProcessWire are a content type that contains one or more custom fields representing the definition of the content type. Every page in ProcessWire is assigned to a template which then represents the type of page. A template is typically shared among multiple pages. Templates also define access control, caching and other settings shared among pages using the template.
+Templates optionally have an associated PHP file, referred to as the template-file. This file is executed whenever the URL for a page using the template is accessed. As a result, template-files are typically used for output purposes. The template-file is provided with several API variables, the most notable|18| being the $page API variable, which contains all the fields and content of the current page being viewed.Template-files serve multiple contexts, depending on the application. ProcessWire's default web site profiles use template-files primarily for output of direct and dynamically|19| generated HTML markup. Template-files may also be used as intermediate controllers between a model and a separate view. Because template-files are regular PHP files, they are able to call upon other web services or PHP applications where appropriate, without a separate parsing|20| layer.
+
+
+=== Field architecture ===
+All fields in ProcessWire are custom fields defined by the user. A given field may be assigned to multiple templates, which in turn hold individual chunks|21| of content for each page using that template. Every field has a type, referred to as the “fieldtype” (1 word), a type of plugin module. ProcessWire includes several fieldtype modules including those that support text, numbers, files, images, page references, URLs, email addresses, dates and comments. Additional fieldtype modules are installed as 3rd party modules.
+
+
+== Distribution and requirements ==
+ProcessWire's source code is hosted on GitHub and is also distributed on Softaculous, Bitnami and Composer/Packagist.
+ProcessWire runs in the AMP|22| (Apache, MySQL, PHP) platform used by many hosting providers and web development environments. ProcessWire requires PHP version 5.3.8 or newer, and MySQL 5.0.15 or newer.
+
+
+== External links ==
+Official website
+ProcessWire on GitHub
+
+
+== References ==

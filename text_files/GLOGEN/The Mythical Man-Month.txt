@@ -1,0 +1,145 @@
+===GLOGEN GLOSSARY===
+
+|1| manpower : The power exerted by a single person (analogous to horsepower).
+|2| second-system effect : The tendency of small, elegant, and successful systems to be succeeded by overengineered, bloated systems, due to inflated expectations and overconfidence.
+|3| IBM : Intercontinental ballistic missile.
+|4| ALGOL : A high-level programming language mostly used for solving mathematical and scientific problems.
+|5| mythical : Existing in myth. A person or thing held in excessive or quasi-religious awe or admiration based on popular legendFather Flanagan was legendary, his institution an American myth.
+|6| partitioned : simple past tense and past participle of partition. To divide something into parts, sections or shares.
+|7| consume : To destroy completely.
+|8| silver bullet : A cocktail somewhat like a martini.
+|9| accidental : Occurring sometimes, by chance; occasional.
+|10| inherent : Naturally as part or consequence of something.
+|11| irreducible : Whose numerator and denominator share no common factor greater than 1.
+|12| Incremental : Pertaining to an increment. The amount of time added to a player's clock after each move.
+|13| accumulate : To grow or increase in quantity or number; to increase greatly.
+|14| milestones : plural of milestone. An important event in a person's life or career, in the history of a nation, in the life of some project, etc
+1933, Stephen Spender, "The Funeral":
+Creating a complete map of the human connectome would therefore be a monumental milestone but not the end of the journey to understanding how our brains work.
+|15| user-friendly : Designed to be easy for an untrained user to use. Continued or repeated practice; usage; habit.
+|16| separating : Present participle and gerund of separate. To divide (a thing) into separate parts.
+|17| decides : Third-person singular simple present indicative form of decide. to cause someone to come to a decision1920, Sir Arthur Conan Doyle, "The Adventure of the Three Gables" (Norton edition, 2005, page 1537),.
+|18| redesign : A plan for making changes to the structure and functions of an artifact, building or system so as to better serve the purpose of the original design, or to serve purposes different from those set forth in the original design. The art of designing.
+|19| inconsistencies : plural of inconsistency. The state of being inconsistent.
+|20| estimating : present participle of estimate. To judge and form an opinion of the value of, from imperfect data.
+|21| in-house : Alternative spelling of in house. The audience for a live theatrical or similar performance.
+|22| formulating : present participle of formulate. To reduce to, or express in, a formula; to put in a clear and definite form of statement or expression.
+|23| communicating : present participle of communicate. To impart
+(transitive) To impart or transmit (information or knowledge) to someone; to make known, to tell.
+|24| versioning : The use of versions as a means of distinguishing similar items.
+|25| prematurely : In a premature manner; too soon or too early.
+|26| ISBN : Initialism of International Standard Book Number.
+|27| Mythical Man Month : The Mythical Man-Month: Essays on Software Engineering is a book on software engineering and project management by Fred Brooks first published in 1975, with subsequent editions in 1982 and 1995.
+|28| Hector : A Trojan hero in Homer's Iliad.
+
+===DOCUMENT BODY===
+
+The Mythical Man-Month: Essays on Software Engineering is a book on software engineering and project management by Fred Brooks first published in 1975, with subsequent editions in 1982 and 1995. Its central theme is that "adding manpower|1| to a late software project makes it later." This idea is known as Brooks's law, and is presented along with the second-system effect|2| and advocacy of prototyping.
+Brooks' observations are based on his experiences at IBM|3| while managing the development of OS/360. He had added more programmers to a project falling behind schedule, a decision that he would later conclude had, counter-intuitively, delayed the project even further. He also made the mistake of asserting that one project—involved in writing an ALGOL|4| compiler—would require six months, regardless of the number of workers involved (it required longer). The tendency for managers to repeat such errors in project development led Brooks to quip that his book is called "The Bible of Software Engineering", because "everybody quotes it, some people read it, and a few people go by it".
+The book is widely regarded as a classic on the human elements of software engineering.
+
+
+== Editions ==
+The work was first published in 1975 (ISBN 0-201-00650-2), reprinted with corrections in 1982, and republished in an anniversary edition with four extra chapters in 1995 (ISBN 0-201-83595-9), including a reprint of the essay "No Silver Bullet" with commentary by the author.
+
+
+== Ideas presented ==
+
+
+=== The mythical|5| man-month ===
+Brooks discusses several causes of scheduling failures. The most enduring is his discussion of Brooks's law:
+Adding manpower to a late software project makes it later. Man-month is a hypothetical unit of work representing the work done by one person in one month; Brooks' law says that the possibility of measuring useful work in man-months is a myth, and is hence the centerpiece of the book.
+Complex programming projects cannot be perfectly partitioned|6| into discrete tasks that can be worked on without communication between the workers and without establishing a set of complex interrelationships between tasks and the workers performing them.
+Therefore, assigning more programmers to a project running behind schedule will make it even later. This is because the time required for the new programmers to learn about the project and the increased communication overhead will consume|7| an ever-increasing quantity of the calendar time available. When n people have to communicate among themselves, as n increases, their output decreases and when it becomes negative the project is delayed further with every person added.
+
+Group intercommunication formula: n(n − 1) / 2
+Example: 50 developers give 50 · (50 – 1) / 2 = 1225 channels of communication.
+
+
+=== No silver bullet|8| ===
+
+Brooks added "No Silver Bullet — Essence and Accidents of Software Engineering"—and further reflections on it, "'No Silver Bullet' Refired"—to the anniversary edition of The Mythical Man-Month.
+Brooks insists that there is no one silver bullet -- "there is no single development, in either technology or management technique, which by itself promises even one order of magnitude [tenfold] improvement within a decade in productivity, in reliability, in simplicity."
+The argument relies on the distinction between accidental|9| complexity and essential complexity, similar to the way Amdahl's law relies on the distinction between "strictly serial" and "parallelizable".
+
+
+=== The second-system effect ===
+
+The second-system effect proposes that, when an architect designs a second system, it is the most dangerous system they will ever design, because they will tend to incorporate all of the additions they originally did not add to the first system due to inherent|10| time constraints. Thus, when embarking on a second system, an engineer should be mindful that they are susceptible to over-engineering it.
+
+
+=== The tendency towards irreducible|11| number of errors ===
+
+The author makes the observation that in a suitably complex system there is a certain irreducible number of errors. Any attempt to fix observed errors tends to result in the introduction of other errors.
+
+
+=== Progress tracking ===
+Brooks wrote "Question: How does a large software project get to be one year late? Answer: One day at a time!" Incremental|12| slippages on many fronts eventually accumulate|13| to produce a large overall delay. Continued attention to meeting small individual milestones|14| is required at each level of management.
+
+
+=== Conceptual integrity ===
+To make a user-friendly|15| system, the system must have conceptual integrity, which can only be achieved by separating|16| architecture from implementation. A single chief architect (or a small number of architects), acting on the user's behalf, decides|17| what goes in the system and what stays out. The architect or team of architects should develop an idea of what the system should do and make sure that this vision is understood by the rest of the team. A novel idea by someone may not be included if it does not fit seamlessly with the overall system design. In fact, to ensure a user-friendly system, a system may deliberately provide fewer features than it is capable of. The point being, if a system is too complicated to use, many features will go unused because no one has time to learn them.
+
+
+=== The manual ===
+The chief architect produces a manual of system specifications. It should describe the external specifications of the system in detail, i.e., everything that the user sees. The manual should be altered as feedback comes in from the implementation teams and the users.
+
+
+=== The pilot system ===
+When designing a new kind of system, a team will design a throw-away system (whether it intends to or not). This system acts as a "pilot plan" that reveals techniques that will subsequently cause a complete redesign|18| of the system. This second, smarter system should be the one delivered to the customer, since delivery of the pilot system would cause nothing but agony to the customer, and possibly ruin the system's reputation and maybe even the company.
+
+
+=== Formal documents ===
+Every project manager should create a small core set of formal documents defining the project objectives, how they are to be achieved, who is going to achieve them, when they are going to be achieved, and how much they are going to cost. These documents may also reveal inconsistencies|19| that are otherwise hard to see.
+
+
+=== Project estimation ===
+When estimating|20| project times, it should be remembered that programming products (which can be sold to paying customers) and programming systems are both three times as hard to write as simple independent in-house|21| programs. It should be kept in mind how much of the work week will actually be spent on technical issues, as opposed to administrative or other non-technical tasks, such as meetings, and especially "stand-up" or "all-hands" meetings.
+
+
+=== Communication ===
+To avoid disaster, all the teams working on a project should remain in contact with each other in as many ways as possible—e-mail, phone, meetings, memos etc. Instead of assuming something, implementers should ask the architect(s) to clarify their intent on a feature they are implementing, before proceeding with an assumption that might very well be completely incorrect. The architect(s) are responsible for formulating|22| a group picture of the project and communicating|23| it to others.
+
+
+=== The surgical team ===
+Much as a surgical team during surgery is led by one surgeon performing the most critical work, while directing the team to assist with less critical parts, it seems reasonable to have a "good" programmer develop critical system components while the rest of a team provides what is needed at the right time. Additionally, Brooks muses that "good" programmers are generally five to ten times as productive as mediocre ones.
+
+
+=== Code freeze and system versioning|24| ===
+Software is invisible. Therefore, many things only become apparent once a certain amount of work has been done on a new system, allowing a user to experience it. This experience will yield insights, which will change a user's needs or the perception of the user's needs. The system should, therefore, be changed to fulfill the changed requirements of the user. This can only occur up to a certain point, otherwise the system may never be completed. At a certain date, no more changes should be allowed to the system and the code should be frozen. All requests for changes should be delayed until the next version of the system.
+
+
+=== Specialized tools ===
+Instead of every programmer having their own special set of tools, each team should have a designated tool-maker who may create tools that are highly customized for the job that team is doing, e.g., a code generator tool that creates code based on a specification. In addition, system-wide tools should be built by a common tools team, overseen by the project manager.
+
+
+=== Lowering software development costs ===
+There are two techniques for lowering software development costs that Brooks writes about:
+
+Implementers may be hired only after the architecture of the system has been completed (a step that may take several months, during which time prematurely|25| hired implementers may have nothing to do).
+Another technique Brooks mentions is not to develop software at all, but simply to buy it "off the shelf" when possible.
+
+
+== See also ==
+Anti-pattern
+Code refactoring
+Peopleware: Productive Projects and Teams
+Software development process
+Hofstadter's law
+
+
+== Bibliography ==
+— (1975). The Mythical Man-Month. Addison-Wesley. ISBN|26| 0-201-00650-2.
+Brooks, Frederick P. Jr. (September 1983). "The Mythical Man-Month". PC Magazine. 2 (4): 210–240.
+— (1995). "Chap. 17". 'No Silver Bullet' Refired. The Mythical Man Month|27| (Anniversary Edition with four new chapters ed.). Addison-Wesley. ISBN 0-201-83595-9.
+
+
+== References ==
+
+
+== External links ==
+Frederick P. Brooks, Jr. Homepage
+Preface to the First Edition, as found on Safari.Informit.com
+Organization and Team Patterns
+A review by Hector|28| Correa on chapters "The Mythical Man-Month" and "No Silver Bullet – Essence and Accident"
+Selected TEXT from The Mythical Man-Month

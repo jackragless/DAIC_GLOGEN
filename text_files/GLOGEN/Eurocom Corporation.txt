@@ -1,0 +1,27 @@
+===GLOGEN GLOSSARY===
+
+|1| Eurocom Corporation : Eurocom Corporation is a Canadian computer developer of high performance notebooks and laptops.
+|2| Eurocom : Eurocom (formerly Eurocom Entertainment Software) was a British video game developer founded in October 1988 by Mat Sneap, Chris Shrigley, Hugh Binns, Tim Rogers and Neil Baldwin, to specifically develop games for the Nintendo Entertainment System.
+|3| configurable : Capable of being configured; customisable; permitting rearrangement or adjustment.
+|4| upgradable : Having the capacity to undergo an upgrade. An improved component or replacement item, usually applied to technology.
+
+===DOCUMENT BODY===
+
+Eurocom Corporation|1| is a Canadian computer developer of high performance notebooks and laptops.
+
+
+== History ==
+Eurocom|2| was founded in 1989 as a company designing desktop replacement notebooks. To achieve this they used CPUs intended for desktop computers in their notebooks. In May 2013 Eurocom began to sell laptops through Future Shop's online retail store.
+
+
+== Background ==
+Eurocom structures laptop design and building around units that it claims are "highly configurable|3| and easi|4|ly upgradable." Another Eurocom philosophy is "creating computers that push technology forward" and the company claims to have a series of industry firsts as a result.  Eurocom offers a series of specialized computers such as Trusted Platform Module notebooks, and Mobile Servers.
+Eurocom has been awarded the "Intel Form Factor Solution Innovation Award"  In addition to other awards from various publications.
+
+
+== References ==
+
+
+== External links ==
+Official website
+Eurocom Europe

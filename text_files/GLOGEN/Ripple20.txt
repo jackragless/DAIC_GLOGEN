@@ -1,0 +1,24 @@
+===GLOGEN GLOSSARY===
+
+|1| Ripple20 : Ripple20 is a set of vulnerabilities discovered in 2020 in a software library that implemented a TCP/IP stack.
+|2| code library : In computer science, a library is a collection of non-volatile resources used by computer programs, often for software development.
+|3| supply chain : A system of organizations, people, technology, activities, information and resources involved in moving a product or service from supplier to customer.
+
+===DOCUMENT BODY===
+
+Ripple20|1| is a set o|2|f vulnerabilities discovered in 2020 in a software library that implemented a TCP/IP stack. The security concerns were discovered by JSOF, which named the collective vulnerabilities for how one company's code became embedded into numerous products.
+
+
+== Description ==
+Ripple20 is a set of 19 vulnerabilities discovered in 2020 in a software library developed by the Cincinnati-based company Treck Inc., which implemented a TCP/IP stack.
+
+
+== History ==
+The first release of Treck's library was around 1997. Treck had also worked with Elmic Systems, which created a fork of the library when the companies ended their collaboration. In September 2019, JSOF researchers analyzed a device containing code from the library and discovered it had vulnerabilities. Further analysis determined that the code originated from Treck's library, which had been widely implemented by numerous manufacturers. The disclosure of the vulnerabilities was made in June 2020. Ripple20 was chosen as the name for the set of vulnerabilities based on the disclosure year and the idea that the problems "rippled" through the supply chain|3| from one company. It is difficult to identify all affected devices, because manufacturers may not realize that the library was used in one of their components.
+
+
+== References ==
+
+
+== External links ==
+"Vulnerability Response Information". treck.com.

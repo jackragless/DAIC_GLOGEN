@@ -1,0 +1,47 @@
+===GLOGEN GLOSSARY===
+
+|1| cloud-based : Cloud computing is the on-demand availability of computer system resources, especially data storage (cloud storage) and computing power, without direct active management by the user.
+|2| HP : higher power.
+|3| provisioning : present participle of provision. To supply (a user) with an account, resources, etc so that they can use a system.
+|4| lifecycle : Alternative spelling of life cycle. .
+|5| provisioned : simple past tense and past participle of provision. To supply (a user) with an account, resources, etc so that they can use a system.
+|6| adopting : present participle of adopt. To take by choice into relationship (a child, heir, friend, citizen, etc)
+(transitive) To take voluntarily (a child of other parents) to be in the place of, or as, one's own child.
+|7| Unisys : Unisys Corporation is an American global information technology company based in Blue Bell, Pennsylvania, that provides IT services, software, and technology.
+|8| cloud computing : Computing services provided over the Internet (or "cloud"), whereby shared resources, software, and information are provided to computers and other devices on demand.
+|9| cloud infrastructure : Cloud computing is the on-demand availability of computer system resources, especially data storage (cloud storage) and computing power, without direct active management by the user.
+|10| deploy : To install, test and implement a computer system or application.
+|11| International Data Corporation : International Data Group, Inc. (IDG) is an American media, events and research company headquartered in Needham, Massachusetts focused on the tech landscape.
+|12| standardizing : present participle of standardize. Alternative spelling of standardise.
+|13| accelerate : To hasten, as the occurrence of an event.
+|14| automates : Third-person singular simple present indicative form of automate. To replace or enhance human labor with machines.
+|15| dynamically : Of a dynamic nature; variable or constantly changing nature.
+|16| shrink : To cower or flinch.
+|17| Middleware : Software that functions at an intermediate layer between applications and operating system or database management system, or between client and server.
+
+===DOCUMENT BODY===
+
+HP Cloud Service Automation (HP CSA) is cloud management software from Hewlett Packard Enterprise (HPE) that is used by companies and government agencies to automate the management of cloud-based|1| IT-as-a-service, from order, to provision, and retirement. HP|2| Cloud Service Automation orchestrates the provisioning|3| and deployment of complex IT services such as of databases, middleware, and packaged applications (i.e., ERP, Exchange). The software speeds deployment of application-based services across hybrid cloud delivery platforms and traditional IT environments.The software is part of a broad portfolio of HP enterprise management software products aimed at helping companies manage the lifecycle|4| of deployment and usage of cloud computing, whether through public or private clouds, or both.
+
+
+== Background on Cloud Computing and Automation ==
+According to the National Institute of Standards and Technology, Information Technology Laboratory, “Cloud computing is a model for enabling convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned|5| and released with minimal management effort or service provider interaction.”Many organizations are adopting|6| cloud computing because it allows them to access applications, resources and services over the Internet on an “as-needed” or “per usage” basis. This has some cost and agility advantages for the IT department. According to a January 2011 Unisys|7| poll, nearly half of U.S. companies consider cloud computing|8| as the top IT priority.While cloud computing can save IT departments money and increase flexibility, it does present some challenges.  These challenges include extra effort and increased difficulty for the IT department because of the complexity associated with the deployment and ongoing management of cloud infrastructure|9| and applications.  Automation and proper management are important when IT departments deploy|10| cloud computing services because of these challenges.According to International Data Corporation|11| (IDC), the use of distributed server/workload automation tools can help lower capital and power and cooling costs by tracking and reclaiming virtual machines, making IT staff more efficient by standardizing|12| and streamlining manual processes, and speed the process of provisioning IT resources by enabling business users the ability to self-provision predefined IT resource.
+
+
+== What HP Cloud Service Automation Does ==
+The function of HP Cloud Service Automation is to accelerate|13| the speed of deployment of application-based services across a hybrid cloud delivery environment. Traditionally, IT staff were required to patch and update physical servers manually. Using HP Cloud Service Automation, IT organizations can update thousands of servers automatically.HP Cloud Service Automation allows IT departments to move and manage applications among in-house (private) cloud systems, external (public) clouds and traditional IT systems.  HP Cloud Service Automation software is also designed to deliver unified security, governance and compliance across applications, as well as physical and virtual infrastructures.  The software automates|14| key IT processes so that there is one consistent approach to IT resource management.HP Cloud Service Automation also allows IT departments to dynamically|15| monitor and provision server, storage and network elements as well as applications to meet the needs of current and upcoming workloads.   In addition, the solution allows IT to automatically grow and shrink|16| the allocated resources in order to meet quality of service targets.HP Cloud Service Automation Software is a component of HP VirtualSystem, a series of integrated server, storage, and networking infrastructures from HP for Citrix, HP-UX, Microsoft, and VMware virtual environments. HP VirtualSystem is part of the HP Converged Systems portfolio of system-based products that use Converged infrastructure for specific workloads. HP Cloud Service Automation Software is also included in HP CloudSystem, a cloud infrastructure from HP that combines storage, servers, networking and software for organizations to build complete private, public and hybrid Cloud computing environments.
+
+
+== Product Packaging ==
+In May 2013, HP packaged version 10 of HP Operations Orchestration, version 10 of HP Server Automation, version 10 of HP Database and Middleware|17| Automation and HP Cloud Service Automation 3.2 into a single integrated package. HP Cloud Service Automation is also available as a standalone software solution.
+
+
+== What HP Cloud Service Automation Works With ==
+HP Cloud Service Automation works with HP Operations Orchestration and HP Server Automation to provide IT lifecycle automation. HP Operations Orchestration is an integrated set of software and services that helps to automate distributed systems and heterogeneous computing environments. User organizations use HP OO to link together separate applications to create a workflow across them. HP Server Automation is used to manage physical and virtual servers as a lifecycle management platform. According to HP, HP SA helps to reduce administrator-to-server ratio by up to 60%.
+
+
+== External links ==
+HP Cloud Service Automation Home Page
+
+
+== References ==

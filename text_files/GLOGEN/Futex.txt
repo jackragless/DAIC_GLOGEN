@@ -1,0 +1,53 @@
+===GLOGEN GLOSSARY===
+
+|1| kernelspace : A modern computer operating system usually segregates virtual memory into kernel space and user space.
+|2| userspace : The area of memory used for a user's applications, etc, as opposed to that reserved for the operating system kernel.
+|3| atomic operations : In concurrent programming, an operation (or set of operations) is linearizable if it consists of an ordered list of invocation and response events (callbacks), that may be extended by adding response events such that:
+
+The extended list can be re-expressed as a sequential history (is serializable).
+|4| interfering : present participle of interfere. To get involved or involve oneself, causing disturbance.
+|5| programmed : simple past tense and past participle of program. To develop (software) by writing program code.
+|6| Linux kernel : The Linux kernel is a free and open-source, monolithic, modular, multitasking, Unix-like operating system kernel.
+|7| file system : A set of blocks that are organized in this way.
+|8| Microsoft Windows : Microsoft Windows, commonly referred to as Windows, is a group of several proprietary graphical operating system families, all of which are developed and marketed by Microsoft.
+|9| CVE : Common Vulnerabilities and Exposures.
+|10| denial-of-service attacks : plural of denial-of-service attack. An attempt to exploit a vulnerability in a computer system.
+|11| deadlock : An inability to continue due to two programs or devices each requiring a response from the other before completing an operation.
+|12| OpenBSD : a Unix-like operating system that is derived from Berkeley Software Distribution (BSD).
+|13| Zircon : A mineral occurring in tetragonal crystals, usually of a brown or grey colour and consisting of silica and zirconia. The oxide of zirconium, obtained as a white powder, and possessing both acid and basic properties.
+|14| WAKE : The area behind something, typically a rapidly moving object.
+|15| herd : A number of domestic animals assembled together under the watch or ownership of a keeper.
+
+===DOCUMENT BODY===
+
+In computing, a futex (short for "fast userspace mutex") is a kernel system call that programmers can use to implement basic locking, or as a building block for higher-level locking abstractions such as semaphores and POSIX mutexes or condition variables.
+A futex consists of a kernelspace|1| wait queue that is attached to an atomic integer in userspace.  Multiple processes or threads operate on the integer entirely in userspace|2| (using atomic operations|3| to avoid interfering|4| with one another), and only resort to relatively expensive system calls to request operations on the wait queue (for example to wake up waiting processes, or to put the current process on the wait queue).  A properly programmed|5| futex-based lock will not use system calls except when the lock is contended; since most operations do not require arbitration between processes,  this will not happen in most cases.
+
+
+== History ==
+On Linux, Hubertus Franke (IBM Thomas J. Watson Research Center), Matthew Kirkwood, Ingo Molnár (Red Hat) and Rusty Russell (IBM Linux Technology Center) originated the futex mechanism. Futexes appeared for the first time in version 2.5.7 of the Linux kernel|6| development series; the semantics stabilized as of version 2.5.40, and futexes have been part of the Linux kernel mainline since the December 2003 release of 2.6.x stable kernel series.
+In 2002 discussions took place on a proposal to make futexes accessible via the file system|7| by creating a special node in /dev or /proc. However, Linus Torvalds strongly opposed this idea and rejected any related patches.Futexes have been implemented in Microsoft Windows|8| since Windows 8 or Windows Server 2012 under the name WaitOnAddress.In 2013 Microsoft patented futexes and the patent was granted in 2014.In May 2014 the CVE|9| system announced a vulnerability discovered in the Linux kernel's futex subsystem that allowed denial-of-service attacks|10| or local privilege escalation.In May 2015 the Linux kernel introduced a deadlock|11| bug via Commit b0c29f79ecea that caused a hang in user applications. The bug affected many enterprise Linux distributions, including 3.x and 4.x kernels, and Red Hat Enterprise Linux version 5, 6 and 7, SUSE Linux 12 and Amazon Linux.Futexes have been implemented in OpenBSD|12| since 2016.The futex mechanism is one of the core concepts of the Zircon|13| kernel in Google's Fuchsia operating system since at least April 2018.
+
+
+== Operations ==
+Futexes have two basic operations, WAIT and WAKE. A third operation called REQUEUE is available and functions as a more generic WAKE|14| operation that can move threads between waiting queues. 
+WAIT(addr, val)If the value stored at the address addr is val, puts the current thread to sleep.WAKE(addr, num)Wakes up num number of threads waiting on the address addr.CMP_REQUEUE(old_addr, new_addr, num_wake, num_move, val)If the value stored at the address old_addr is val, wakes num_wake threads waiting on the address old_addr, and enqueues num_move threads waiting on the address old_addr to now wait on the address new_addr. This can be used to avoid the thundering herd|15| problem on wake.
+
+
+== See also ==
+Synchronization
+Fetch-and-add
+Compare and swap
+
+
+== References ==
+
+
+== External links ==
+futex(2) - futex() system call
+futex(7) - futex semantics and usage
+Hubertus Franke, Rusty Russell, Matthew Kirkwood. Fuss, futexes and furwocks: Fast Userlevel Locking in Linux, Ottawa Linux Symposium 2002.
+Drepper, Ulrich (2011). "Futexes are Tricky" (PDF). 1.6. Red Hat.
+Bert Hubert (2004). Unofficial Futex manpages
+Ingo Molnar. "Robust Futexes", Linux Kernel Documentation
+"Priority Inheritance Futexes", Linux Kernel Documentation

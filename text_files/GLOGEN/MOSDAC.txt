@@ -1,0 +1,24 @@
+===GLOGEN GLOSSARY===
+
+|1| MOSDAC : MOSDAC (the Meteorological and Oceanographic Satellite Data Archival Centre) is a data repository for the missions of the Indian Space Research Organisation (ISRO) and Government of India, dealing with meteorology, oceanography and tropical water cycles.
+|2| Archival : The act of archiving something.
+|3| disseminated : simple past tense and past participle of disseminate. To become widespread.
+|4| weather services : The 557th Weather Wing is a United States Air Force formation and its lead military meteorology center.
+|5| collateral : Corresponding; accompanying, concomitant.
+|6| ISRO : Indian Space Research Organisation
+|7| SMART : Self-Monitoring, Analysis and Reporting Technology.
+|8| state-of-the-art : Alternative form of state of the art. Skill that is attained by study, practice, or observation.
+
+===DOCUMENT BODY===
+
+MOSDAC|1| (the Meteorological and Oceanographic Satellite Data Archival|2| Centre) is a data repository for the missions of the Indian Space Research Organisation (ISRO) and Government of India, dealing with meteorology, oceanography and tropical water cycles. Data acquired from missions is disseminated|3| in near real time from Space Applications Centre (SAC), Ahmedabad through the  MOSDAC web site. The Indian miniature satellite  SCATSAT-1, dedicated to ocean wind observation has its beta version of data disseminated through ftp (https://web.archive.org/web/20170407003751/http://ftp.mosdac.gov.in/).
+The web site also hosts weather services|4| including cloud burst and heavy rain alerts, genesis of tropical cyclones in the Indian Ocean along with track and intensity prediction and a three hourly weather forecast for the next seventy two hours. The weather alerts are supported with a decision support system, where collateral|5| information in terms of land use, land cover, DEM, population, administrative boundaries, roads, rivers etc. can be interactively overlaid. The forecast and weather alerts are also accessible over Android devices through a free downloadable WeatherApp.
+Satellite data based Meteorology And Oceanography Research and Training (SMART) is an ISRO|6| initiative to support students, academics and researchers across the country to pursue research in the field of Meteorology and Oceanography using satellite data archived at MOSDAC and other related datasets. SMART|7| is managed by MOSDAC Research and Training Division (MRTD), MOSDAC Research Group, SAC. The support includes state-of-the-art|8| computer facilities, research guidance and familiarisation with MOSDAC data.
+ISRO is an official data partner of the Committee on Earth Observation Satellites. MOSDAC ensures near real time availability of the SAPHIR data of Meghatropiques mission for the Global Precipitation Measurement (GPM).
+
+
+== References ==
+
+
+== External links ==
+Official site
