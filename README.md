@@ -1,21 +1,22 @@
-# ---GLOGEN---
+# GLOGEN
 ### Domain-specific Keyword Extraction & GLOssary GENeration
 ---------------------------------------------
 ### Features
 ###### Module 1: train keyword extraction model:
-1. WIKI MINER: Recursively mines all pages from a given Wikipedia Category (domain) (https://en.wikipedia.org/wiki/Wikipedia:Contents/Categories); extracts all hyperlinks to form keyword/keyphrase dataset.
-2. RULEBASED KEYWORD ADDER: Adds additional, non-link keywords using TF-IDF (OPTIONAL).
-3. CLEANER / CHINKER: Cleans raw Wiki page text and chinks unwanted keywords incl GEO, PERSON, ORG using entity classification / rule-based.
-4. BIOGEN: Converts text to Beggining-Inside-Outside (BIO) format for training.
-5. BERT TRAINER: Trains bert-base-uncased keyword extraction model using SimpleTransformers.
+1. INTERFACE (train_kw_extractor.py)
+2. WIKI MINER (P1_wikipedia_corpus_miner.py): Recursively mines all pages from a given Wikipedia Category (domain) (https://en.wikipedia.org/wiki/Wikipedia:Contents/Categories); extracts all hyperlinks to form keyword/keyphrase dataset.
+3. RULEBASED KEYWORD ADDER (P2_manual_add_keywords.py): Adds additional, non-link keywords using TF-IDF (OPTIONAL).
+4. CLEANER / CHINKER (P3_wiki_corpus_cleaning_chinking.py): Cleans raw Wiki page text and chinks unwanted keywords incl GEO, PERSON, ORG using entity classification / rule-based.
+5. BIOGEN (P4_biogen_format_conversion.py): Converts text to Beginning-Inside-Outside (BIO) format for training.
+6. BERT TRAINER (P5_simpletransformers_bert_training_evaluation.py): Trains bert-base-uncased keyword extraction model using SimpleTransformers. 
 
 ###### Module 2: glossary generator:
-1. GLOSSARY GENERATOR INTERFACE: Takes .txt files from specified directory as input.
-2. PREPROCESS UTILITIES: apply various text cleaning techniques incl lemmatisation, stopword removal, grammar removal, tokenisation etc.
-3. AI KW DETECT: generates array of predicted keywords/phrases from given text using pretrained model from Module 1.
-4. PARSE UTILITIES: generates constituency tree / POS tags of text.
-5. WIKTIONARY DEFINITION PARSER: modified code from https://github.com/Suyash458/WiktionaryParser
-6. WIKTIONARY DEFINITION PREDICTOR: takes wiktionary object ---> selects candidate definitions with same POS tag as keyword 
+1. GLOSSARY GENERATOR INTERFACE (glossary_generator.py): Takes .txt files from specified directory as input.
+2. PREPROCESS UTILITIES (preprocess_utils.py): apply various text cleaning techniques incl lemmatisation, stopword removal, grammar removal, tokenisation etc.
+3. AI KEYWORD DETECT (ai_kw_detect.py): generates array of predicted keywords/phrases from given text using pretrained model from Module 1.
+4. PARSING UTILITIES (parse_utils.py): generates constituency tree / POS tags of text.
+5. WIKTIONARY DEFINITION PARSER (wikt_def_parse.py): modified code from https://github.com/Suyash458/WiktionaryParser
+6. WIKTIONARY DEFINITION PREDICTOR (wikt_def_predict.py): takes wiktionary object ---> selects candidate definitions with same POS tag as keyword 
 ---> predicts best definition via semantic similarity between definition sentence / definition domain / definition example and the source text.
 
 
