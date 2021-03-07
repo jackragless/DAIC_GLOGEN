@@ -1,0 +1,12 @@
+Futex.txt
+Existing glossary:
+len = 15
+incorrect = 5
+
+ChucK.txt
+len = 14
+incorrect = 1
+
+ProcessWire.txt
+len = 22
+incorrect = 1
