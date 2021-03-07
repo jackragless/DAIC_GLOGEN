@@ -37,3 +37,5 @@ Evaluation metrics in `data`
 ###### Module 2: glossary generator:
 Run `python glossary_generator.py`
 Modify supporting files in `glossary_generator` directory.
+
+See examples of GLOGEN glossary generation in `GLOGEN_output_examples`
