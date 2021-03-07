@@ -47,13 +47,13 @@ print('\n')
 
 
 #pipeline 2
-wiki_corpus_kw_added = P2_manual_add_keywords.driver(wiki_corpus)
-with open('data/wiki_corpus_addedkw.pkl', 'wb') as f:
-    pickle.dump(wiki_corpus, f)
-print('\n')
+# wiki_corpus_kw_added = P2_manual_add_keywords.driver(wiki_corpus)
+# with open('data/wiki_corpus_addedkw.pkl', 'wb') as f:
+#     pickle.dump(wiki_corpus, f)
+# print('\n')
 
 #unigram generation
-unigram = generate_domain_unigram.driver(wiki_corpus_kw_added)
+unigram = generate_domain_unigram.driver(wiki_corpus)
 unigram.to_csv('data/domain_specific_unigram.csv')
 print('\n')
 
