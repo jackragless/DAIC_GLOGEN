@@ -40,5 +40,5 @@ Modify supporting files in `glossary_generator` directory.
 
 See examples of GLOGEN glossary generation in `GLOGEN_output_examples`
 
-##License
+## License
 Apache-2.0
